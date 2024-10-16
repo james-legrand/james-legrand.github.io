@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_4cbf8791adaa6a58c6facb7c3c185490 {
+                #map_8c1f93426a28cd63b8bbd7cc1685ba1b {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -35,18 +35,34 @@
                 .leaflet-container { font-size: 1rem; }
             </style>
         
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-tag-filter-button/src/leaflet-tag-filter-button.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-tag-filter-button/src/leaflet-tag-filter-button.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/css-ripple-effect@1.0.5/dist/ripple.min.css"/>
+    
+            <style>
+                .easy-button-button {
+                  display: block !important;
+                }
+
+                .tag-filter-tags-container {
+                  left: 30px;
+                }
+            </style>
+        
 </head>
 <body>
     
     
-            <div class="folium-map" id="map_4cbf8791adaa6a58c6facb7c3c185490" ></div>
+            <div class="folium-map" id="map_8c1f93426a28cd63b8bbd7cc1685ba1b" ></div>
         
 </body>
 <script>
     
     
-            var map_4cbf8791adaa6a58c6facb7c3c185490 = L.map(
-                "map_4cbf8791adaa6a58c6facb7c3c185490",
+            var map_8c1f93426a28cd63b8bbd7cc1685ba1b = L.map(
+                "map_8c1f93426a28cd63b8bbd7cc1685ba1b",
                 {
                     center: [51.520305877808276, -0.07912649909674882],
                     crs: L.CRS.EPSG3857,
@@ -60,55 +76,93 @@
 
         
     
-            var tile_layer_e9949b10211cf282ea880d539fff7fcf = L.tileLayer(
+            var tile_layer_7f2159ba4f576b7ac2afb33cea8753a4 = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
                 {"attribution": "test", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abcd", "tms": false}
             );
         
     
-            tile_layer_e9949b10211cf282ea880d539fff7fcf.addTo(map_4cbf8791adaa6a58c6facb7c3c185490);
+            tile_layer_7f2159ba4f576b7ac2afb33cea8753a4.addTo(map_8c1f93426a28cd63b8bbd7cc1685ba1b);
         
     
-            var circle_marker_685270a7c29033570deb5c6055a738da = L.circleMarker(
+            var circle_marker_ebf156efbbbdcd33b0455970368d4819 = L.circleMarker(
                 [51.520305877808276, -0.07912649909674882],
                 {"bubblingMouseEvents": true, "color": "#FF7757", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF7757", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
-            ).addTo(map_4cbf8791adaa6a58c6facb7c3c185490);
+            ).addTo(map_8c1f93426a28cd63b8bbd7cc1685ba1b);
         
     
-        var popup_d145282d981043366d9dc3ec4022cdfe = L.popup({"maxWidth": "100%"});
+        var popup_b31b19004efd63b0c1c6e1893e17c4a4 = L.popup({"maxWidth": "100%"});
 
         
             
-                var html_2077c7bd42bdc67c9e94bc3a3be2cdd1 = $(`<div id="html_2077c7bd42bdc67c9e94bc3a3be2cdd1" style="width: 100.0%; height: 100.0%;"><div style='width: 120px;'>         <strong>RBB London Office</strong>         </div>`)[0];
-                popup_d145282d981043366d9dc3ec4022cdfe.setContent(html_2077c7bd42bdc67c9e94bc3a3be2cdd1);
+                var html_f0149d161e3115d5d98bc894bb1a5ac8 = $(`<div id="html_f0149d161e3115d5d98bc894bb1a5ac8" style="width: 100.0%; height: 100.0%;"><div style='width: 100px;'>         <strong>RBB London Office</strong>         </div>`)[0];
+                popup_b31b19004efd63b0c1c6e1893e17c4a4.setContent(html_f0149d161e3115d5d98bc894bb1a5ac8);
             
         
 
-        circle_marker_685270a7c29033570deb5c6055a738da.bindPopup(popup_d145282d981043366d9dc3ec4022cdfe)
+        circle_marker_ebf156efbbbdcd33b0455970368d4819.bindPopup(popup_b31b19004efd63b0c1c6e1893e17c4a4)
         ;
 
         
     
     
-            var marker_901548b3ba875dcda3cf1296bf8bf114 = L.marker(
+            var marker_c33346e2152f8795d56280870a010312 = L.marker(
                 [51.51649361, -0.075260626],
-                {}
-            ).addTo(map_4cbf8791adaa6a58c6facb7c3c185490);
+                {"tags": ["Vegetarian", "Vegan"]}
+            ).addTo(map_8c1f93426a28cd63b8bbd7cc1685ba1b);
         
     
-        var popup_34e90c0e50e3cb3392e4e9d413bb380c = L.popup({"maxWidth": 300});
+            var icon_714124856d358ff4aa43114f619bb01c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "None", "iconColor": "white", "markerColor": "lightgreen", "prefix": "glyphicon"}
+            );
+            marker_c33346e2152f8795d56280870a010312.setIcon(icon_714124856d358ff4aa43114f619bb01c);
+        
+    
+        var popup_6d63866aea44504e838264d91b43d145 = L.popup({"maxWidth": 300});
 
         
             
-                var html_098f1a31c12794e8788d50bc2f703703 = $(`<div id="html_098f1a31c12794e8788d50bc2f703703" style="width: 100.0%; height: 100.0%;">     <div style='width: 200px;'>         <strong>Falafel Shack</strong><br>41a Goulston St, London E1 7TP<br>         <div><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span></div>     </div>     </div>`)[0];
-                popup_34e90c0e50e3cb3392e4e9d413bb380c.setContent(html_098f1a31c12794e8788d50bc2f703703);
+                var html_046c5db6e3e3fc636d615506f99044ff = $(`<div id="html_046c5db6e3e3fc636d615506f99044ff" style="width: 100.0%; height: 100.0%;">     <div style='width: 200px;'>         <strong>Falafel Shack</strong><br>41a Goulston St, London E1 7TP<br>         <div><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span></div>     </div>     </div>`)[0];
+                popup_6d63866aea44504e838264d91b43d145.setContent(html_046c5db6e3e3fc636d615506f99044ff);
             
         
 
-        marker_901548b3ba875dcda3cf1296bf8bf114.bindPopup(popup_34e90c0e50e3cb3392e4e9d413bb380c)
+        marker_c33346e2152f8795d56280870a010312.bindPopup(popup_6d63866aea44504e838264d91b43d145)
         ;
 
         
     
+    
+            var marker_c6b4e8080f931aac0946db3bc341898e = L.marker(
+                [51.91649361, -0.105260626],
+                {"tags": ["Vegan"]}
+            ).addTo(map_8c1f93426a28cd63b8bbd7cc1685ba1b);
+        
+    
+            var icon_8fd6e712a8f2fa4b0059e8e466f19674 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "None", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_c6b4e8080f931aac0946db3bc341898e.setIcon(icon_8fd6e712a8f2fa4b0059e8e466f19674);
+        
+    
+        var popup_23a992588dcce954fccb994968f03afa = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b3de3f04b9c15f0e0565e560f4d95e02 = $(`<div id="html_b3de3f04b9c15f0e0565e560f4d95e02" style="width: 100.0%; height: 100.0%;">     <div style='width: 200px;'>         <strong>test</strong><br>41a Goulston St, London E1 7TP<br>         <div><span class="fa fa-star checked"></span></div>     </div>     </div>`)[0];
+                popup_23a992588dcce954fccb994968f03afa.setContent(html_b3de3f04b9c15f0e0565e560f4d95e02);
+            
+        
+
+        marker_c6b4e8080f931aac0946db3bc341898e.bindPopup(popup_23a992588dcce954fccb994968f03afa)
+        ;
+
+        
+    
+    
+            var tag_filter_button_25875c9351dc91efc3a3fbc652cb66b6 = L.control.tagFilterButton(
+                {"clearText": "clear", "data": ["Vegetarian", "Vegan"], "filterOnEveryClick": true, "icon": "fa-filter", "openPopupOnHover": true}
+            ).addTo(map_8c1f93426a28cd63b8bbd7cc1685ba1b);
+        
 </script>
 </html>
