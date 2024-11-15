@@ -1,25 +1,261 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Map Embed</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        iframe {
-            border: none;
-            width: 100%; 
-            height: 100%; 
-        }
-    </style>
-</head>
-<body>
-    <iframe src="Maps/Lunch_Map.html"></iframe>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Portfolio" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/0e26cc2aa3.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./resources/css/styles.css" />
+    <title>James Legrand</title>
+    <link rel="icon" type="image/png" href="/resources/images/pfp.png"/>
+  </head>
+  <body class="light" id="top">
+    <header class="header center">
+      <div class="link">
+        <a href="https://james-legrand.github.io">
+          <img src="./resources/images/pfp.png" width="50" height="50" alt="Profile Picture">
+        </a>
+      </div>
+      <nav class="nav center">
+        <ul class="nav__list center">
+          <li class="nav__list-item">
+            <a class="link link--nav" href="#about">About</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="link link--nav" href="#projects">Projects</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="link link--nav" href="#economics">Economics</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!-- About -->
+      <div class="about center">
+        <h1>Hi, I am <span class="about__name">James.</span></h1>
+        <!--<h2 class="about__role">A Competition Economist.</h2>-->
+        <p class="about__desc">
+          I am a full-time NYT Connections player and occasional competition economist. I am interested in algorithmic pricing and applications of reinforcement learning in economics. Before selling out to industry, I studied economics at Cambridge for 4 years; some of my Economics based projects can be found
+
+          <a style="color:#2978b5;" href="#economics">
+          here.
+          </a>
+          Projects entirely unrelated to anything important can be found
+          <a style="color:#2978b5;" href="#projects">
+            here.
+            </a>
+          
+        </p>
+        
+        <div class="about__contact center">
+          <!--
+          <a href="resources/test.pdf">
+            <span class="btn btn--outline">Resume</span>
+          </a>
+          -->
+          <a
+            href="https://github.com/james-legrand/"
+            aria-label="github"
+            class="link link--icon"
+          >
+            <i aria-hidden="true" class="fab fa-github"></i>
+          </a>
+          <a
+            href="https://uk.linkedin.com/in/james-legrand1"
+            aria-label="linkedin"
+            class="link link--icon"
+          >
+            <i aria-hidden="true" class="fab fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
+      
+      <!-- RBB Projects -->
+      <section id="projects" class="section projects">
+        <h2 class="section__title">Projects</h2>
+
+        <div class="projects__grid">
+          <div class="project">
+            <div class>
+              <a href="../pages/lunch_map.html">
+                <h3>Lunch Map</h3>
+              </a>
+            </div>
+            <p class="project__description">
+              Leaflet.js map of new-joiner reviewed lunch locations around the RBB office, colour coded by price, filtered by dietary options and with very serious ratings. 
+            </p>
+            <ul class="project__stack">
+              <li class="project__stack-item">Python</li>
+              <li class="project__stack-item">HTML</li>
+            </ul>
+          </div>
+
+          <div class="project">
+            <a href="../pages/fuzzy_matching.html">
+              <h3>Fuzzy Matching Tool</h3>
+            </a>
+            <p class="project__description">
+              GUI-based tool for fuzzy string matching using RapidFuzz. Options to customise matching algorithm and data cleaning, now with fuzzy animal facts!
+            </p>
+            <ul class="project__stack">
+              <li class="project__stack-item">Python</li>
+            </ul>
+
+            <a
+              href="https://github.com/james-legrand/Fuzzy-Matching"
+              aria-label="source code"
+              class="link link--icon"
+            >
+              <i aria-hidden="true" class="fab fa-github"></i>
+            </a>
+          </div>
+
+          <div class="project">
+            <a href="../pages/volcanos.html">
+              <h3>Volcanos</h3>
+            </a>
+            <p class="project__description">
+              WIP
+            </p>
+            <!--
+            <ul class="project__stack">
+              <li class="project__stack-item">SASS</li>
+              <li class="project__stack-item">TypeScript</li>
+              <li class="project__stack-item">React</li>
+            </ul>
+
+            <a
+              href="https://github.com"
+              aria-label="source code"
+              class="link link--icon"
+            >
+              <i aria-hidden="true" class="fab fa-github"></i>
+            </a>
+            -->
+          </div>
+          <!--
+          <div class="project">
+            <a href="../pages/etna.html">
+              <h3>Etna</h3>
+            </a>
+            <p class="project__description">
+              WIP
+            </p>
+            
+            <ul class="project__stack">
+              <li class="project__stack-item">SASS</li>
+              <li class="project__stack-item">TypeScript</li>
+              <li class="project__stack-item">React</li>
+            </ul>
+
+            <a
+              href="https://github.com"
+              aria-label="source code"
+              class="link link--icon"
+            >
+              <i aria-hidden="true" class="fab fa-github"></i>
+            </a>
+            -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="economics" class="section projects">
+        <h2 class="section__title">Economics</h2>
+
+        <div class="projects__grid">
+          <div class="project">
+            <a href="../pages/algocomp.html">
+              <h3>Algocomp</h3>
+            </a>
+            <p class="project__description">
+              Python package to simulate competition between pricing algorithms in a Bertrand Oligopoly. Currently supported algorithms: PSO and Q-Learning.
+            </p>
+            <ul class="project__stack">
+              <li class="project__stack-item">Python</li>
+              <li class="project__stack-item">LaTeX</li>
+            </ul>
+
+            <a
+              href="https://github.com"
+              aria-label="source code"
+              class="link link--icon"
+            >
+              <i aria-hidden="true" class="fab fa-github"></i>
+            </a>
+            <a
+            href="https://pypi.org/project/algocomp/"
+            aria-label="PyPi"
+            class="link link--icon"
+          >
+            <i aria-hidden="true" class="fab fa-python"></i>
+          </a>
+          </div>
+
+          <div class="project">
+            <a href="../pages/econometrics.html">
+              <h3>Econometrics Notes</h3>
+            </a>
+            <p class="project__description">
+              Notes from the Cambridge MPhil in Economic Research (2023-2024) : Introductory Econometrics, Panel Data, and Time Series.
+            </p>
+            <ul class="project__stack">
+              <li class="project__stack-item">LaTeX</li>
+            </ul>
+
+            <a
+              href="https://github.com/james-legrand/Metrics-Notes/"
+              aria-label="source code"
+              class="link link--icon"
+            >
+              <i aria-hidden="true" class="fab fa-github"></i>
+            </a>
+            
+          </div>
+
+          <div class="project">
+            <a href="../pages/merger_simulation.html">
+              <h3>Merger Simulation</h3>
+            </a>
+            <p class="project__description">
+              Simple model to perform merger simulations, based on Epstein and Rubinfield(2001). 
+            </p>
+
+            <ul class="project__stack">
+              <li class="project__stack-item">Python</li>
+            </ul>
+
+            <a
+              href="https://github.com/james-legrand/Merger-Simulation"
+              aria-label="source code"
+              class="link link--icon"
+            >
+              <i aria-hidden="true" class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="scroll-container">
+      <div class="scroll-top">
+        <a aria-label="Scroll up" href="#top">
+          <i aria-hidden="true" class="fas fa-arrow-up"></i>
+        </a>
+      </div>
+    </div>
+
+    <script src="/resources/js/script.js"></script>
+  </body>
 </html>
