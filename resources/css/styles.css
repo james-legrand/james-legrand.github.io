@@ -147,7 +147,6 @@ iframe {
   margin-bottom: 10px;
 }
 
-
   /* Table Styling */
   table {
     width: 100%;
@@ -180,7 +179,11 @@ iframe {
     padding: 6px;
     margin: 8px 0;
     border-radius: 4px;
-    overflow-x: auto;
+    white-space: pre-wrap; /* Allow wrapping */
+    word-wrap: break-word; /* Break long words */
+    overflow-wrap: break-word; /* Ensure consistent word breaking */
+    overflow-x: auto; /* Allow horizontal scroll if necessary */
+    max-width: 100%; /* Make it responsive */
   }
 
   /* Row Styling */
@@ -196,7 +199,19 @@ iframe {
   h1 {
     font-size: 2.6rem;
   }
+  .pdf-item {
+    display: block; /* Stack the text content vertically */
+  }
+
+  .pdf-iframe {
+    display: none; /* Remove the iframe */
+  }
+
+  .pdf-text-content h3 {
+    text-decoration: underline; /* Underline the title */
+  }
 }
+
 
 /*===================
   buttons and links
@@ -455,4 +470,13 @@ main {
   background-color: transparent;
   font-size: 1.8rem;
   transition: transform 0.2s ease-in-out;
+}
+
+#markdown-container {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5;
+  color: var(--clr-fg);
+}
+#markdown-container h1 {
+  color: var(--clr-primary);
 }

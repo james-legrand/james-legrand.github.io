@@ -51,91 +51,64 @@
       <hr>
       
       <h3>Features</h3>
-      <ul style="list-style-type: none; padding-left: 0; font-size: 16px;">
-        <li><strong>Import datasets:</strong> Supports <code>.xlsx</code>, <code>.csv</code>, and <code>.dta</code> file formats. Select columns for matching and uniquely identifying observations.</li>
-        <li><strong>Export options:</strong> Save results in <code>.xlsx</code>, <code>.csv</code>, or <code>.dta</code> formats.</li>
-        <li><strong>Output types:</strong>
-          <ul style="padding-left: 20px; margin-top: 5px;">
-            <li>All possible combinations: Reports score for every possible match, grouped by ID in dataset 1.</li>
-            <li>Highest possible matches: Reports the best match for each ID in dataset 1.</li>
-            <li>Matches above a threshold: Groups matches by ID in dataset 1.</li>
-          </ul>
-        </li>
-        <li><strong>Matching algorithms:</strong>
-          <ul style="padding-left: 20px; margin-top: 5px;">
-            <li><strong>Set Ratio:</strong> Compares unique/common words, ignoring extra/repeated words.</li>
-            <li><strong>Sort Ratio:</strong> Sorts words in strings before comparison.</li>
-            <li><strong>Max(Set Ratio, Sort Ratio):</strong> Returns the higher score of the two.</li>
-            <li><strong>WRatio:</strong> A weighted scoring method for enhanced accuracy.</li>
-          </ul>
-        </li>
-        <li><strong>Additional settings:</strong>
-          <ul style="padding-left: 20px; margin-top: 5px;">
-            <li><strong>Fuzzy animal fact:</strong> Prints a fun fact about fuzzy animals in the completion message.</li>
-            <li><strong>Prep for manual checks:</strong> Adds columns for validation and comments, with color grouping for easier comparison.</li>
-            <li><strong>Keep all columns:</strong> Includes all columns from the original datasets in the output.</li>
-          </ul>
-        </li>
-      </ul>
-      
-      <hr>
+      <h4>Data formats</h4>
+      <p>Import and export currently support <code>.xlsx</code>, <code>.csv</code>, and <code>.dta</code> file formats. Select columns for matching and uniquely identifying observations.</p>
       <br>
-      <h3>Matching Algorithms</h3>
-        <table>
-          <thead>
-            <tr>
-              <th>Algorithm</th>
-              <th>Description</th>
-              <th>Example</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Set Ratio</strong></td>
-              <td>Matches based on unique/common words, ignoring extras.</td>
-              <td>
-                <pre class="code-block"><code class="language-python">In [1]: fuzz.token_set_ratio("I love competition economics", "competition economics")
-Out[1]: 100 </code></pre>
-              </td>
-            </tr>
-            <tr>
-              <td><strong>Sort Ratio</strong></td>
-              <td>Sorts words before matching for order-independent matches.</td>
-              <td>
-                <pre class="code-block"><code class="language-python">In [2]: fuzz.token_sort_ratio("I love competition economics", "economics competition I love")
+      <h4>Output Types</h4>
+      <p>Choose from the following output options:</p>
+      <ul style="padding-left: 20px;">
+        <li><strong>All possible combinations:</strong> Reports score for every possible match, grouped by ID in dataset 1.</li>
+        <li><strong>Highest possible matches:</strong> Reports the best match for each ID in dataset 1.</li>
+        <li><strong>Matches above a threshold:</strong> Groups matches by ID in dataset 1.</li>
+      </ul>
+      <br>
+      <h4>Matching Algorithms</h4>
+      <h5>Set Ratio</h5>
+      <p>Compares based on unique/common words, ignoring extra and repeated words.</p>
+      <pre class="code-block"><code class="language-python">In [1]: fuzz.token_set_ratio("I love competition economics", "competition economics")
+    Out[1]: 100</code></pre>
+
+      <h5>Sort Ratio</h5>
+      <p>Sorts words in strings before comparison.</p>
+      <pre class="code-block"><code class="language-python">In [2]: fuzz.token_sort_ratio("I love competition economics", "economics competition I love")
 Out[2]: 100</code></pre>
-              </td>
-            </tr>
-            <tr>
-              <td><strong>Max(Set Ratio, Sort Ratio)</strong></td>
-              <td>Uses the higher score of Set Ratio and Sort Ratio.</td>
-              <td>
-                <pre class="code-block"><code class="language-python">In [1]: fuzz.token_set_ratio("I love competition economics", "competition economics")
+
+      <h5>Max(Set Ratio, Sort Ratio)</h5>
+      <p>Uses the higher score of Set Ratio and Sort Ratio.</p>
+      <pre class="code-block"><code class="language-python">In [1]: fuzz.token_set_ratio("I love competition economics", "competition economics")
 Out[1]: 100
 In [2]: fuzz.token_sort_ratio("I love competition economics", "competition economics")
 Out[2]: 85.71428571428572
 In [3]: fuzz.token_ratio("I love competition economics", "competition economics")
 Out[3]: 100</code></pre>
-              </td>
-            </tr>
-            <tr>
-              <td><strong>WRatio</strong></td>
-              <td>Weighted score for better accuracy.</td>
-              <td>
-                <pre class="code-block"><code class="language-python">In [1]: fuzz.WRatio("I love competition economics", "competition economics")
-Out[1]: 95.0 </code></pre>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      
-      <hr>
+
+      <h5>WRatio</h5>
+      <p>Weighted score for better accuracy.</p>
+      <pre class="code-block"><code class="language-python">In [1]: fuzz.WRatio("I love competition economics", "competition economics")
+Out[1]: 95.0</code></pre>
+
+      <br>
+      <h4>Additional Settings</h4>
+      <ul style="padding-left: 20px;">
+        <li><strong>Fuzzy animal fact:</strong> Prints a fun fact about fuzzy animals in the completion message.</li>
+        <li><strong>Prep for manual checks:</strong> Adds columns for validation and comments, with color grouping for easier comparison.</li>
+        <li><strong>Keep all columns:</strong> Includes all columns from the original datasets in the output.</li>
+      </ul>
       <br>
       <h3>Preview</h3>
-      <div style="display: flex; justify-content: center; gap: 40px;">
-        <img src="../resources/images/fuzzy_dark.png" alt="Fuzzy Matching Dark Theme" width="250" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-        <img src="../resources/images/fuzzy_light.png" alt="Fuzzy Matching Light Theme" width="250" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+      <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
+        <img 
+          src="../resources/images/fuzzy_dark.png" 
+          alt="Fuzzy Matching Dark Theme" 
+          width="250" 
+          style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); flex: 1; max-width: 100%;">
+        <img 
+          src="../resources/images/fuzzy_light.png" 
+          alt="Fuzzy Matching Light Theme" 
+          width="250" 
+          style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); flex: 1; max-width: 100%;">
       </div>
+      
       
     </main>
 

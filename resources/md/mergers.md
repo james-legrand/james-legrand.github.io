@@ -1,22 +1,32 @@
-This note serves as an introductory guide to merger simulation techniques. It aims to walk-through the history of merger simulation, replicating the results of seminal papers step by step.
+This note serves as an introductory guide to merger simulation techniques. It aims to briefly outline key techniques, replicating the results of seminal papers step by step.
+Merger simulations are one of many approaches to forecasting the unilateral effects of a merger. At a high level, merger simulations work by first imposing a form of competition, then calibrating the *structural parameters* of the relevant theoretical model using pre-merger data. This is to say, parameters are specified in such a way that the moments implied by the model match the empirical moments (elasticities, market shares etc.) pre-merger. Under the assumption that these parameters remain unchanged, the model is then applied to any number of counterfactuals to predict price changes.
 
-Merger simulations are one of many approaches to forecasting the unilateral effects of a merger. They goal of merger simulation is to first simulate the market outcome before the merger ('learning' or 'calibrating' the model), then to apply our model to any number of counterfactuals and predict price changes.
+Of course, it is important to keep in mind that economists are often wrong. Modelling is never entirely comprehensive, and even if it were, the future is not deterministic. However, having a structured approach to such problems, rather than relying solely on intuition, allows others to replicate, interpret, and further our understanding. It is crucial, though, to pay attention to the assumptions made at every step and the many ways they might be broken.
 
-It's important to keep in mind throughout that economists are wrong a lot, often because what we can measure does not reflect what actually matters. As a result, we make ever stronger assumptions to circumvent reality. While merger simulations are not a crystal ball, having a structured approach to such problems allows others to replicate, interpret and further our understanding. It is key however, to pay close attention to the assumptions made at every step and the many ways they might be broken.
+We follow the following categorisation of merger simulation models by [Budzinksi and Ruhmer(2009)](https://academic.oup.com/jcle/article-abstract/6/2/277/906293). At the first stage, models are classified according to the assumed form of competition that best describes the market. On the second level of classification the most common model classification - Bertrand – is split with respect to the demand system. The figure below illustrates this categorisation scheme.
 
-- [Episode I](#episode-1-the-phantom-menace)
+![Merger Sim Flow chart](../images/merger_simulation_flow.png)
+
+The remainder of this note takes each category in turn, providing background, deriving key theoretical results, and replicating key results.
+
+
+- [Episode I: Linear Demand](#episode--the-phantom-elasticities)
 - [Episode II: PCAIDS](#episode-iia-attack-of-the-shares)
     - [Assumptions](#assumptions)
     - [Model Setup](#model-setup)
     - [Replication](#replication)
     - [Appendix](#appendix)
+- [Episode III – Multi-Level Demand](#episode-iii-revenge-of-the-bottoms)
+- [Episode IV – Logit](#episode-100-a-binary-hope)
+- [Episode V – Cournot Models](#episode-v-quantity-setting-strikes-back)
+- [Episode VI – Auction Models](#episode--return-of-micro-theory)
 
-## Episode I: The Phantom Menace
+## Episode \\: The Phantom Elasticities
 
 ## Episode II(A): Attack of the Shares
 This note covers a simple PCAIDS model, following the original paper by [Epstein and Rubinfield(2001)](https://escholarship.org/uc/item/2sq9s8c8).
 
-Proportionality-Calibrated AIDS (PCAIDS) is an attempt to reduce the reliance on vast amounts of data or circumvent the estimation problems of standard AIDS, it's a quick and dirty alternative to AIDS. PCAIDS requires neither scanner data nor pre-merger prices. It only requires information on:
+Proportionality-Calibrated AIDS (PCAIDS) is an attempt to reduce the reliance on vast amounts of data or circumvent the estimation problems of standard AIDS. PCAIDS requires neither scanner data nor pre-merger prices. It only requires information on:
 1. market shares,
 2. the industry price elasticity, and
 3. the price elasticity for one brand in the market.
@@ -63,12 +73,12 @@ b_{31} & b_{32} & b_{33}
 \end{pmatrix}
 
 ```
-Firm *i*'s market share is defined as $s_i = \frac{p_i q_i}{PQ}$ , where $p_i$ denotes *i*'s price, $q_i$ denotes *i*'s quantity, $Q$ total market output, and $P$ the aggregate industry price index. We assume a logarithmic price aggregator, that is the price index is given by: $\ln(P) = \sum_{i=1}^3 s_i \ln(p_i)$.
+Firm *i*'s market share is defined as $s_i = \frac{p_i q_i}{PQ}$ , where $p_i$ denotes *i*'s price, $q_i$ denotes *i*'s quantity, $Q$ total market output, and $P$ the aggregate industry price index. We assume a logarithmic price aggregator; the price index is given by: $\ln(P) = \sum_{i=1}^3 s_i \ln(p_i)$.
 
 The own-coefficients $b_{ii}$ specify the effect of each firm's own price on its share; we expect these to have negative signs (since an increase in a firms price should reduce demand for their product holding all else equal). The $b_{ij}$'s specify the efects of the prices of other firms on each brand's share. We expect these cross effects to be positive (assuming the products are substitutes).
 
 ### Replication
-For illustration, we replicate the example in table 1 on page 895 of [Epstein and Rubinfield(2001)](https://escholarship.org/uc/item/2sq9s8c8), then simulate a merger between firms 1 and 2.
+For illustration, we first replicate the example in table 1 on page 895 of [Epstein and Rubinfield(2001)](https://escholarship.org/uc/item/2sq9s8c8), then use this calibrated model to simulate a merger between firms 1 and 2.
 
 ```python
 from math import log
@@ -96,7 +106,7 @@ coefficient['firm1', 'firm1'] = market_share['firm1'] * (elasticity['firm1', 'fi
 ```
 Proportionality implies that all remaining own-effect coefficients can be determined as simple multiples of $b_{11}$ (proof in paper):
 ```math
-b_{ii} = \frac{s_i}{1-s_i} \cdot \frac{1-s_i}{s_i} \cdot b_{11}
+b_{ii} = \frac{s_i}{1-s_1} \cdot \frac{1-s_i}{s_1} \cdot b_{11}
 ```
 This allows us to update the coefficient dictionary with all own-coefficients.
 ```python
@@ -385,3 +395,15 @@ We can simplify by multiplying through by $\frac{p^p_j}{P^pQ^p}$, giving:
 \implies s^p_j  &= -\sum_{j}\epsilon_{ji}^p s_j^p\mu_j^p \quad \forall i,j \in M
 \end{align*}
 ```
+
+## Episode I<span style="font-size: 0.8em;">I</span><span style="font-size: 0.55em;">I</span>: Revenge of the Bottoms
+Beer paper
+## Episode 100: A Binary Hope
+### Flat Logit
+### Nested Logit
+### Random Coefficients Logit
+
+## Episode V: Quantity-Setting Strikes Back
+
+## Episode $v_i$: Return of Micro Theory
+
