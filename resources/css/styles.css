@@ -113,6 +113,12 @@ iframe {
   height:auto !important; 
 }
 
+
+model-viewer{
+height:100%;
+width:100%;
+}
+
 /* Parent container styles */
 .pdf-container {
   display: flex;
