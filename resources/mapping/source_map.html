@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_869aa37219b82cd805ae9bd3bb6656a0 {
+                #map_a6404b47f940ef7643c8066f26410bdd {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -55,20 +55,23 @@
 <body>
     
     
-            <div class="folium-map" id="map_869aa37219b82cd805ae9bd3bb6656a0" ></div>
+            <div class="folium-map" id="map_a6404b47f940ef7643c8066f26410bdd" ></div>
         
 </body>
 <script>
     
     
-            var map_869aa37219b82cd805ae9bd3bb6656a0 = L.map(
-                "map_869aa37219b82cd805ae9bd3bb6656a0",
+            var map_a6404b47f940ef7643c8066f26410bdd = L.map(
+                "map_a6404b47f940ef7643c8066f26410bdd",
                 {
                     center: [51.520305877808276, -0.07912649909674882],
                     crs: L.CRS.EPSG3857,
-                    zoom: 16,
-                    zoomControl: true,
-                    preferCanvas: false,
+                    ...{
+  "zoom": 16,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
                 }
             );
 
@@ -76,498 +79,1142 @@
 
         
     
-            var tile_layer_ab0f13e22efe5db2ce145460aeba0fdd = L.tileLayer(
+            var tile_layer_bdcc9674033bdc7b2af0085826f1747f = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
-                {"attribution": "CartoDB", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abcd", "tms": false}
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "CartoDB",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
             );
         
     
-            tile_layer_ab0f13e22efe5db2ce145460aeba0fdd.addTo(map_869aa37219b82cd805ae9bd3bb6656a0);
+            tile_layer_bdcc9674033bdc7b2af0085826f1747f.addTo(map_a6404b47f940ef7643c8066f26410bdd);
         
     
-            var circle_marker_38327d5ea70064ad87cc4a2b00c667b9 = L.circleMarker(
+            var circle_marker_0320761deda8afed77900e913794495f = L.circleMarker(
                 [51.520305877808276, -0.07912649909674882],
                 {"bubblingMouseEvents": true, "color": "#004679", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#BDE3FF", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 1}
-            ).addTo(map_869aa37219b82cd805ae9bd3bb6656a0);
+            ).addTo(map_a6404b47f940ef7643c8066f26410bdd);
         
     
-        var popup_3f0f682d3c236d5cdf3cfcefe70f9d21 = L.popup({"maxWidth": "100%"});
+        var popup_dc7da147f7bef876043c8b69de698755 = L.popup({
+  "maxWidth": "100%",
+});
 
         
             
-                var html_8445617afdfddbaa42a66bc548600d47 = $(`<div id="html_8445617afdfddbaa42a66bc548600d47" style="width: 100.0%; height: 100.0%;"><div style='width: 100px;'>         <strong>RBB London Office</strong>         </div>`)[0];
-                popup_3f0f682d3c236d5cdf3cfcefe70f9d21.setContent(html_8445617afdfddbaa42a66bc548600d47);
+                var html_5099ac30ac6a3478785ec02709a138b3 = $(`<div id="html_5099ac30ac6a3478785ec02709a138b3" style="width: 100.0%; height: 100.0%;"><div style='width: 100px;'>         <strong>RBB London Office</strong>         </div>`)[0];
+                popup_dc7da147f7bef876043c8b69de698755.setContent(html_5099ac30ac6a3478785ec02709a138b3);
             
         
 
-        circle_marker_38327d5ea70064ad87cc4a2b00c667b9.bindPopup(popup_3f0f682d3c236d5cdf3cfcefe70f9d21)
+        circle_marker_0320761deda8afed77900e913794495f.bindPopup(popup_dc7da147f7bef876043c8b69de698755)
         ;
 
         
     
     
-            var marker_d3b246ff8412a8e842a8858a1ebe236d = L.marker(
+            var marker_d74a2f345f3933290feca466b92fe34e = L.marker(
                 [51.5166125665311, -0.0752790481083131],
-                {"tags": []}
-            ).addTo(map_869aa37219b82cd805ae9bd3bb6656a0);
+                {
+  "tags": [
+],
+}
+            ).addTo(map_a6404b47f940ef7643c8066f26410bdd);
         
     
-            var icon_c4f95eb3a58a3bd2a581686036cd4a7c = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "None", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            var icon_09533ed49e546aba191727cf65fd19a2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "None",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
             );
-            marker_d3b246ff8412a8e842a8858a1ebe236d.setIcon(icon_c4f95eb3a58a3bd2a581686036cd4a7c);
+            marker_d74a2f345f3933290feca466b92fe34e.setIcon(icon_09533ed49e546aba191727cf65fd19a2);
         
     
-        var popup_fad579043bab130033d84919257affc5 = L.popup({"maxWidth": 300});
+        var popup_fbddef32611cf53b4611357d7a01edf9 = L.popup({
+  "maxWidth": 300,
+});
 
         
             
-                var html_61922ee96a1d003a21579459a76a2883 = $(`<div id="html_61922ee96a1d003a21579459a76a2883" style="width: 100.0%; height: 100.0%;">     <div style='width: 200px;'>         <strong>Chicken Tikka Wrap Place</strong><br>         Bell Lane, London<br>         <div><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span></div>         <div>Reviewers: Linn</div>     </div> </div>`)[0];
-                popup_fad579043bab130033d84919257affc5.setContent(html_61922ee96a1d003a21579459a76a2883);
+                var html_f29e7fb3504a957652f560db4025335d = $(`<div id="html_f29e7fb3504a957652f560db4025335d" style="width: 100.0%; height: 100.0%;">     <div style='width: 200px;'>         <strong>Chicken Tikka Wrap Place</strong><br>         Bell Lane, London<br>         <div><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span></div>         <div>Reviewers: Linn</div>     </div> </div>`)[0];
+                popup_fbddef32611cf53b4611357d7a01edf9.setContent(html_f29e7fb3504a957652f560db4025335d);
             
         
 
-        marker_d3b246ff8412a8e842a8858a1ebe236d.bindPopup(popup_fad579043bab130033d84919257affc5)
+        marker_d74a2f345f3933290feca466b92fe34e.bindPopup(popup_fbddef32611cf53b4611357d7a01edf9)
         ;
 
         
     
     
-            var marker_2c68aa498adea4bce19391d5f61353e8 = L.marker(
+            var marker_ff8815996bf967c7f234bdf8e7e958ca = L.marker(
+                [51.5152838813151, -0.0827302751006075],
+                {
+  "tags": [
+],
+}
+            ).addTo(map_a6404b47f940ef7643c8066f26410bdd);
+        
+    
+            var icon_8a6c32741b318f31125a42d89267181e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "None",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_ff8815996bf967c7f234bdf8e7e958ca.setIcon(icon_8a6c32741b318f31125a42d89267181e);
+        
+    
+        var popup_d35f08adfc8c5266f447226e6d122c00 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_196b0ec98ba680057a3baf8b54076c45 = $(`<div id="html_196b0ec98ba680057a3baf8b54076c45" style="width: 100.0%; height: 100.0%;">     <div style='width: 200px;'>         <strong>Coco Di Mama</strong><br>         Bishopsgate, 55 Bishopsgate, City of London, London EC2N 3AH<br>         <div><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span></div>         <div>Reviewers: Janelle, Dave</div>     </div> </div>`)[0];
+                popup_d35f08adfc8c5266f447226e6d122c00.setContent(html_196b0ec98ba680057a3baf8b54076c45);
+            
+        
+
+        marker_ff8815996bf967c7f234bdf8e7e958ca.bindPopup(popup_d35f08adfc8c5266f447226e6d122c00)
+        ;
+
+        
+    
+    
+            var marker_fa0335ca7bf8ceb4fec5e3f6d90b7d08 = L.marker(
                 [51.5168214636161, -0.075305928157392],
-                {"tags": ["Vegan"]}
-            ).addTo(map_869aa37219b82cd805ae9bd3bb6656a0);
+                {
+  "tags": [
+"Vegan",
+],
+}
+            ).addTo(map_a6404b47f940ef7643c8066f26410bdd);
         
     
-            var icon_2bf7248ed2cf8af54e300630625acb59 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "None", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            var icon_51804d46c003583d8ece3e85944f2e0c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "None",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
             );
-            marker_2c68aa498adea4bce19391d5f61353e8.setIcon(icon_2bf7248ed2cf8af54e300630625acb59);
+            marker_fa0335ca7bf8ceb4fec5e3f6d90b7d08.setIcon(icon_51804d46c003583d8ece3e85944f2e0c);
         
     
-        var popup_7fdb4e13ef819d67468e90b8662e5aed = L.popup({"maxWidth": 300});
+        var popup_c2c0c411244b77daf24438d3765a6dae = L.popup({
+  "maxWidth": 300,
+});
 
         
             
-                var html_a2228aebefcf21fbc769346974dd5f50 = $(`<div id="html_a2228aebefcf21fbc769346974dd5f50" style="width: 100.0%; height: 100.0%;">     <div style='width: 200px;'>         <strong>Ethiopian Petticoat Lane</strong><br>         Bell Lane, London<br>         <div><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span></div>         <div>Reviewers: Chiara</div>     </div> </div>`)[0];
-                popup_7fdb4e13ef819d67468e90b8662e5aed.setContent(html_a2228aebefcf21fbc769346974dd5f50);
+                var html_af2667b0a28e7cc1721e5a6f749ab4aa = $(`<div id="html_af2667b0a28e7cc1721e5a6f749ab4aa" style="width: 100.0%; height: 100.0%;">     <div style='width: 200px;'>         <strong>Ethiopian Petticoat Lane</strong><br>         Bell Lane, London<br>         <div><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span></div>         <div>Reviewers: Chiara</div>     </div> </div>`)[0];
+                popup_c2c0c411244b77daf24438d3765a6dae.setContent(html_af2667b0a28e7cc1721e5a6f749ab4aa);
             
         
 
-        marker_2c68aa498adea4bce19391d5f61353e8.bindPopup(popup_7fdb4e13ef819d67468e90b8662e5aed)
+        marker_fa0335ca7bf8ceb4fec5e3f6d90b7d08.bindPopup(popup_c2c0c411244b77daf24438d3765a6dae)
         ;
 
         
     
     
-            var marker_cd7043186dac65dc3bd2016f078e1226 = L.marker(
+            var marker_b44834fa6f1f91aeaec21e438772adce = L.marker(
                 [51.51649361, -0.075260626],
-                {"tags": ["Vegetarian"]}
-            ).addTo(map_869aa37219b82cd805ae9bd3bb6656a0);
+                {
+  "tags": [
+"Vegetarian",
+],
+}
+            ).addTo(map_a6404b47f940ef7643c8066f26410bdd);
         
     
-            var icon_655970b004a000c55f229a4142dd20f0 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "None", "iconColor": "white", "markerColor": "lightgreen", "prefix": "glyphicon"}
+            var icon_6312f9ae1ccc7a7e76050f691a0f4cf3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightgreen",
+  "iconColor": "white",
+  "icon": "None",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
             );
-            marker_cd7043186dac65dc3bd2016f078e1226.setIcon(icon_655970b004a000c55f229a4142dd20f0);
+            marker_b44834fa6f1f91aeaec21e438772adce.setIcon(icon_6312f9ae1ccc7a7e76050f691a0f4cf3);
         
     
-        var popup_c75e8a8c773afc76c15fd254c98093fa = L.popup({"maxWidth": 300});
+        var popup_a3710ba4d16168bcd1256a3a55e2795e = L.popup({
+  "maxWidth": 300,
+});
 
         
             
-                var html_ea0c739015e8a3b99b18b78c2d93ae0f = $(`<div id="html_ea0c739015e8a3b99b18b78c2d93ae0f" style="width: 100.0%; height: 100.0%;">     <div style='width: 200px;'>         <strong>Falafel Shack</strong><br>         41a Goulston St, London E1 7TP<br>         <div><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span></div>         <div>Reviewers: Chiara</div>     </div> </div>`)[0];
-                popup_c75e8a8c773afc76c15fd254c98093fa.setContent(html_ea0c739015e8a3b99b18b78c2d93ae0f);
+                var html_27a1e15e8ecf53da9898fddf435ba2d0 = $(`<div id="html_27a1e15e8ecf53da9898fddf435ba2d0" style="width: 100.0%; height: 100.0%;">     <div style='width: 200px;'>         <strong>Falafel Shack</strong><br>         41a Goulston St, London E1 7TP<br>         <div><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span></div>         <div>Reviewers: Chiara</div>     </div> </div>`)[0];
+                popup_a3710ba4d16168bcd1256a3a55e2795e.setContent(html_27a1e15e8ecf53da9898fddf435ba2d0);
             
         
 
-        marker_cd7043186dac65dc3bd2016f078e1226.bindPopup(popup_c75e8a8c773afc76c15fd254c98093fa)
+        marker_b44834fa6f1f91aeaec21e438772adce.bindPopup(popup_a3710ba4d16168bcd1256a3a55e2795e)
         ;
 
         
     
     
-            var marker_59ec74451e188b5139fb93b5d4287f03 = L.marker(
+            var marker_333e0b1f94ca0dd4892135cdef91a11d = L.marker(
                 [51.5197044679108, -0.0850562000776618],
-                {"tags": ["Vegetarian"]}
-            ).addTo(map_869aa37219b82cd805ae9bd3bb6656a0);
+                {
+  "tags": [
+"Vegetarian",
+],
+}
+            ).addTo(map_a6404b47f940ef7643c8066f26410bdd);
         
     
-            var icon_182b04bab07ed170a80868ff248190ed = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "None", "iconColor": "white", "markerColor": "lightred", "prefix": "glyphicon"}
+            var icon_b2e444a5a4ec5c7107e91c665d5ec618 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightred",
+  "iconColor": "white",
+  "icon": "None",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
             );
-            marker_59ec74451e188b5139fb93b5d4287f03.setIcon(icon_182b04bab07ed170a80868ff248190ed);
+            marker_333e0b1f94ca0dd4892135cdef91a11d.setIcon(icon_b2e444a5a4ec5c7107e91c665d5ec618);
         
     
-        var popup_5bb27902bc97b2c471355f701dbc7728 = L.popup({"maxWidth": 300});
+        var popup_af83330b6a7f6956336b6c3be07a1f70 = L.popup({
+  "maxWidth": 300,
+});
 
         
             
-                var html_d8a52d8fb24d9744af4baf6f2c00b30b = $(`<div id="html_d8a52d8fb24d9744af4baf6f2c00b30b" style="width: 100.0%; height: 100.0%;">     <div style='width: 200px;'>         <strong>Farmer J</strong><br>         Unit 11 Finsbury Ave, London EC2M 2PF<br>         <div><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span></div>         <div>Reviewers: Chiara</div>     </div> </div>`)[0];
-                popup_5bb27902bc97b2c471355f701dbc7728.setContent(html_d8a52d8fb24d9744af4baf6f2c00b30b);
+                var html_c7e9afdbbc68b3349718fcae6e6af839 = $(`<div id="html_c7e9afdbbc68b3349718fcae6e6af839" style="width: 100.0%; height: 100.0%;">     <div style='width: 200px;'>         <strong>Farmer J</strong><br>         Unit 11 Finsbury Ave, London EC2M 2PF<br>         <div><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span></div>         <div>Reviewers: Chiara</div>     </div> </div>`)[0];
+                popup_af83330b6a7f6956336b6c3be07a1f70.setContent(html_c7e9afdbbc68b3349718fcae6e6af839);
             
         
 
-        marker_59ec74451e188b5139fb93b5d4287f03.bindPopup(popup_5bb27902bc97b2c471355f701dbc7728)
+        marker_333e0b1f94ca0dd4892135cdef91a11d.bindPopup(popup_af83330b6a7f6956336b6c3be07a1f70)
         ;
 
         
     
     
-            var marker_6cab6b8e097ce504aab98b072582fa4b = L.marker(
+            var marker_7b3d2e4c417190da307aef51bedef596 = L.marker(
                 [51.519620491831, -0.0754268247822221],
-                {"tags": ["Vegetarian"]}
-            ).addTo(map_869aa37219b82cd805ae9bd3bb6656a0);
+                {
+  "tags": [
+"Vegetarian",
+],
+}
+            ).addTo(map_a6404b47f940ef7643c8066f26410bdd);
         
     
-            var icon_058e9c97bca75f08e6ba4a782053dec2 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "None", "iconColor": "white", "markerColor": "lightred", "prefix": "glyphicon"}
+            var icon_e74fdffc685c1662a6ab6468984daf1f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightred",
+  "iconColor": "white",
+  "icon": "None",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
             );
-            marker_6cab6b8e097ce504aab98b072582fa4b.setIcon(icon_058e9c97bca75f08e6ba4a782053dec2);
+            marker_7b3d2e4c417190da307aef51bedef596.setIcon(icon_e74fdffc685c1662a6ab6468984daf1f);
         
     
-        var popup_ac7d17fa1db33423fad4c2499484a940 = L.popup({"maxWidth": 300});
+        var popup_8de2cc2f466d3ab35a2e347a90a2d955 = L.popup({
+  "maxWidth": 300,
+});
 
         
             
-                var html_b037d7e92316ba80cf43e140c467d6e4 = $(`<div id="html_b037d7e92316ba80cf43e140c467d6e4" style="width: 100.0%; height: 100.0%;">     <div style='width: 200px;'>         <strong>Fen Noodles</strong><br>         Old Spitalfields Market, London E1 6EW<br>         <div><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span></div>         <div>Reviewers: Eleonora</div>     </div> </div>`)[0];
-                popup_ac7d17fa1db33423fad4c2499484a940.setContent(html_b037d7e92316ba80cf43e140c467d6e4);
+                var html_3d46d7405aecaa7a83d51951bfbe8931 = $(`<div id="html_3d46d7405aecaa7a83d51951bfbe8931" style="width: 100.0%; height: 100.0%;">     <div style='width: 200px;'>         <strong>Fen Noodles</strong><br>         Old Spitalfields Market, London E1 6EW<br>         <div><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span></div>         <div>Reviewers: Eleonora</div>     </div> </div>`)[0];
+                popup_8de2cc2f466d3ab35a2e347a90a2d955.setContent(html_3d46d7405aecaa7a83d51951bfbe8931);
             
         
 
-        marker_6cab6b8e097ce504aab98b072582fa4b.bindPopup(popup_ac7d17fa1db33423fad4c2499484a940)
+        marker_7b3d2e4c417190da307aef51bedef596.bindPopup(popup_8de2cc2f466d3ab35a2e347a90a2d955)
         ;
 
         
     
     
-            var marker_e371fdf9a4035b037693949d11cfc3f6 = L.marker(
+            var marker_d94379cbdb7927fe72692f5056fa7ae7 = L.marker(
                 [51.5197634823723, -0.0751367562254544],
-                {"tags": ["Vegetarian"]}
-            ).addTo(map_869aa37219b82cd805ae9bd3bb6656a0);
+                {
+  "tags": [
+"Vegetarian",
+],
+}
+            ).addTo(map_a6404b47f940ef7643c8066f26410bdd);
         
     
-            var icon_02d6c06cf3352748373a63f6750c4910 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "None", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            var icon_c4563aee02ef542a95122183e40cf142 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "None",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
             );
-            marker_e371fdf9a4035b037693949d11cfc3f6.setIcon(icon_02d6c06cf3352748373a63f6750c4910);
+            marker_d94379cbdb7927fe72692f5056fa7ae7.setIcon(icon_c4563aee02ef542a95122183e40cf142);
         
     
-        var popup_02fc7d630821fb986b1287fd1c376cf8 = L.popup({"maxWidth": 300});
+        var popup_e88713feee67f7e3a275410e58cc4039 = L.popup({
+  "maxWidth": 300,
+});
 
         
             
-                var html_93d37b79e20eb5179eca63ccf986c724 = $(`<div id="html_93d37b79e20eb5179eca63ccf986c724" style="width: 100.0%; height: 100.0%;">     <div style='width: 200px;'>         <strong>Grilled Cheese Spitalfields</strong><br>         Old Spitalfields Market, London E1 6EW<br>         <div><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span></div>         <div>Reviewers: Chiara</div>     </div> </div>`)[0];
-                popup_02fc7d630821fb986b1287fd1c376cf8.setContent(html_93d37b79e20eb5179eca63ccf986c724);
+                var html_faae05c6da791ff7bb3d360a29e3ae7f = $(`<div id="html_faae05c6da791ff7bb3d360a29e3ae7f" style="width: 100.0%; height: 100.0%;">     <div style='width: 200px;'>         <strong>Grilled Cheese Spitalfields</strong><br>         Old Spitalfields Market, London E1 6EW<br>         <div><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span></div>         <div>Reviewers: Chiara</div>     </div> </div>`)[0];
+                popup_e88713feee67f7e3a275410e58cc4039.setContent(html_faae05c6da791ff7bb3d360a29e3ae7f);
             
         
 
-        marker_e371fdf9a4035b037693949d11cfc3f6.bindPopup(popup_02fc7d630821fb986b1287fd1c376cf8)
+        marker_d94379cbdb7927fe72692f5056fa7ae7.bindPopup(popup_e88713feee67f7e3a275410e58cc4039)
         ;
 
         
     
     
-            var marker_e00e438274393b9cdde6b0cd51fab30e = L.marker(
+            var marker_08716686cff6815d4bdebf3613084e86 = L.marker(
+                [51.5190574678304, -0.0798273522639023],
+                {
+  "tags": [
+"Halal",
+],
+}
+            ).addTo(map_a6404b47f940ef7643c8066f26410bdd);
+        
+    
+            var icon_90fce6a5b25b5073ed4911209bc6046c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "None",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_08716686cff6815d4bdebf3613084e86.setIcon(icon_90fce6a5b25b5073ed4911209bc6046c);
+        
+    
+        var popup_bbaa0613818e15bef5034fc9dd31de22 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_aff0419f8199097f9af2a923b93586c4 = $(`<div id="html_aff0419f8199097f9af2a923b93586c4" style="width: 100.0%; height: 100.0%;">     <div style='width: 200px;'>         <strong>JWD Lamian Noodle Bar</strong><br>         155 Bishopsgate, City of London, London EC2M 3YD<br>         <div><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span></div>         <div>Reviewers: Janelle</div>     </div> </div>`)[0];
+                popup_bbaa0613818e15bef5034fc9dd31de22.setContent(html_aff0419f8199097f9af2a923b93586c4);
+            
+        
+
+        marker_08716686cff6815d4bdebf3613084e86.bindPopup(popup_bbaa0613818e15bef5034fc9dd31de22)
+        ;
+
+        
+    
+    
+            var marker_367005700ae183f80f3c0b70a27d2bd2 = L.marker(
+                [51.516485778016, -0.0833690647207746],
+                {
+  "tags": [
+],
+}
+            ).addTo(map_a6404b47f940ef7643c8066f26410bdd);
+        
+    
+            var icon_0b8a5d72ab15037e7712f28922ac3e91 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "None",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_367005700ae183f80f3c0b70a27d2bd2.setIcon(icon_0b8a5d72ab15037e7712f28922ac3e91);
+        
+    
+        var popup_9eabb23872e78f2d19fd4cb804cf69fa = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_efd4e6611360005b73cd25c734c1a941 = $(`<div id="html_efd4e6611360005b73cd25c734c1a941" style="width: 100.0%; height: 100.0%;">     <div style='width: 200px;'>         <strong>K10</strong><br>         Old Broad St, Liverpool St<br>         <div><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span></div>         <div>Reviewers: Janelle</div>     </div> </div>`)[0];
+                popup_9eabb23872e78f2d19fd4cb804cf69fa.setContent(html_efd4e6611360005b73cd25c734c1a941);
+            
+        
+
+        marker_367005700ae183f80f3c0b70a27d2bd2.bindPopup(popup_9eabb23872e78f2d19fd4cb804cf69fa)
+        ;
+
+        
+    
+    
+            var marker_c538450a5d2b422fe8cf29fe44324b19 = L.marker(
                 [51.5179357162201, -0.0763928761595603],
-                {"tags": ["Vegetarian"]}
-            ).addTo(map_869aa37219b82cd805ae9bd3bb6656a0);
+                {
+  "tags": [
+"Vegetarian",
+],
+}
+            ).addTo(map_a6404b47f940ef7643c8066f26410bdd);
         
     
-            var icon_66a1fae69cbce4e060d8e532cff75d3b = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "None", "iconColor": "white", "markerColor": "lightred", "prefix": "glyphicon"}
+            var icon_3af08571429e122f821e75e308276f88 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightred",
+  "iconColor": "white",
+  "icon": "None",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
             );
-            marker_e00e438274393b9cdde6b0cd51fab30e.setIcon(icon_66a1fae69cbce4e060d8e532cff75d3b);
+            marker_c538450a5d2b422fe8cf29fe44324b19.setIcon(icon_3af08571429e122f821e75e308276f88);
         
     
-        var popup_c82cbf9310c9d9f4262a372e16a8f669 = L.popup({"maxWidth": 300});
+        var popup_e6741add9d42f0a2a778873e995584a6 = L.popup({
+  "maxWidth": 300,
+});
 
         
             
-                var html_daa17cd347c24f9118ed5537d4c59b11 = $(`<div id="html_daa17cd347c24f9118ed5537d4c59b11" style="width: 100.0%; height: 100.0%;">     <div style='width: 200px;'>         <strong>Kastner & Ovens</strong><br>         13 Frying Pan Alley, London E1 7HS<br>         <div><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span></div>         <div>Reviewers: Chiara</div>     </div> </div>`)[0];
-                popup_c82cbf9310c9d9f4262a372e16a8f669.setContent(html_daa17cd347c24f9118ed5537d4c59b11);
+                var html_092d7ff6e2e9d46f886bfd63643e5d5d = $(`<div id="html_092d7ff6e2e9d46f886bfd63643e5d5d" style="width: 100.0%; height: 100.0%;">     <div style='width: 200px;'>         <strong>Kastner & Ovens</strong><br>         13 Frying Pan Alley, London E1 7HS<br>         <div><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span></div>         <div>Reviewers: Chiara</div>     </div> </div>`)[0];
+                popup_e6741add9d42f0a2a778873e995584a6.setContent(html_092d7ff6e2e9d46f886bfd63643e5d5d);
             
         
 
-        marker_e00e438274393b9cdde6b0cd51fab30e.bindPopup(popup_c82cbf9310c9d9f4262a372e16a8f669)
+        marker_c538450a5d2b422fe8cf29fe44324b19.bindPopup(popup_e6741add9d42f0a2a778873e995584a6)
         ;
 
         
     
     
-            var marker_6426be9fc64a08e863262c2763586607 = L.marker(
-                [51.5192521171508, -0.0810920288139501],
-                {"tags": ["Vegetarian"]}
-            ).addTo(map_869aa37219b82cd805ae9bd3bb6656a0);
+            var marker_3f3cb2e1b403f911b5c56401baff4ec9 = L.marker(
+                [51.5240753834855, -0.0840869311242315],
+                {
+  "tags": [
+],
+}
+            ).addTo(map_a6404b47f940ef7643c8066f26410bdd);
         
     
-            var icon_5beb532525558a4e3fdfcaf87556a210 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "None", "iconColor": "white", "markerColor": "lightgreen", "prefix": "glyphicon"}
+            var icon_df883df132d4167891637fa4f3049eef = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightred",
+  "iconColor": "white",
+  "icon": "None",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
             );
-            marker_6426be9fc64a08e863262c2763586607.setIcon(icon_5beb532525558a4e3fdfcaf87556a210);
+            marker_3f3cb2e1b403f911b5c56401baff4ec9.setIcon(icon_df883df132d4167891637fa4f3049eef);
         
     
-        var popup_f7d7c5bfa4a1694031191129b544437f = L.popup({"maxWidth": 300});
+        var popup_8b042224da8a752c051fca67b10a1784 = L.popup({
+  "maxWidth": 300,
+});
 
         
             
-                var html_5f76ffe2793f274938a1c689495586bb = $(`<div id="html_5f76ffe2793f274938a1c689495586bb" style="width: 100.0%; height: 100.0%;">     <div style='width: 200px;'>         <strong>McDonalds</strong><br>         Unit 25, The Concourse Liverpool Street Station, London EC2M 7PY<br>         <div><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span></div>         <div>Reviewers: Owen</div>     </div> </div>`)[0];
-                popup_f7d7c5bfa4a1694031191129b544437f.setContent(html_5f76ffe2793f274938a1c689495586bb);
+                var html_a2b3b87f0420fc4b5003353244a134ab = $(`<div id="html_a2b3b87f0420fc4b5003353244a134ab" style="width: 100.0%; height: 100.0%;">     <div style='width: 200px;'>         <strong>Kokodoo</strong><br>         54 St Paul Street EC2A 4LN<br>         <div><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span></div>         <div>Reviewers: Yash</div>     </div> </div>`)[0];
+                popup_8b042224da8a752c051fca67b10a1784.setContent(html_a2b3b87f0420fc4b5003353244a134ab);
             
         
 
-        marker_6426be9fc64a08e863262c2763586607.bindPopup(popup_f7d7c5bfa4a1694031191129b544437f)
+        marker_3f3cb2e1b403f911b5c56401baff4ec9.bindPopup(popup_8b042224da8a752c051fca67b10a1784)
         ;
 
         
     
     
-            var marker_8906eb8f9f2b42713322fd1f3f8440d2 = L.marker(
+            var marker_ac281c254b034fc35382ea87bdd8516c = L.marker(
+                [51.518660626856, -0.079282431647999],
+                {
+  "tags": [
+],
+}
+            ).addTo(map_a6404b47f940ef7643c8066f26410bdd);
+        
+    
+            var icon_a469b0632d06d09627228b152b246cda = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "None",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_ac281c254b034fc35382ea87bdd8516c.setIcon(icon_a469b0632d06d09627228b152b246cda);
+        
+    
+        var popup_ffeca93b7642539b6a3bb130fd268bf3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_251f195aa1b5c988898780c5e4ae5817 = $(`<div id="html_251f195aa1b5c988898780c5e4ae5817" style="width: 100.0%; height: 100.0%;">     <div style='width: 200px;'>         <strong>Loh Japandi Kitchen</strong><br>         228 Bishopgate, London EC2m 4QD<br>         <div><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span></div>         <div>Reviewers: Janelle</div>     </div> </div>`)[0];
+                popup_ffeca93b7642539b6a3bb130fd268bf3.setContent(html_251f195aa1b5c988898780c5e4ae5817);
+            
+        
+
+        marker_ac281c254b034fc35382ea87bdd8516c.bindPopup(popup_ffeca93b7642539b6a3bb130fd268bf3)
+        ;
+
+        
+    
+    
+            var marker_3420cf98c7fd4e540db7dacd993c7e4a = L.marker(
+                [51.5145587447483, -0.0866327476336976],
+                {
+  "tags": [
+],
+}
+            ).addTo(map_a6404b47f940ef7643c8066f26410bdd);
+        
+    
+            var icon_d58884ca5599eb325f515b9fe853ab48 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightred",
+  "iconColor": "white",
+  "icon": "None",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_3420cf98c7fd4e540db7dacd993c7e4a.setIcon(icon_d58884ca5599eb325f515b9fe853ab48);
+        
+    
+        var popup_39403e2ec9ddff81934dd65890a3f04b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1b4307c158b3fe7876e6551744084ad7 = $(`<div id="html_1b4307c158b3fe7876e6551744084ad7" style="width: 100.0%; height: 100.0%;">     <div style='width: 200px;'>         <strong>M Threadneedle Street</strong><br>         Unit 2 & 3, 60 Threadneedle St, City of London, London EC2R 8HG<br>         <div><span class="fa fa-star checked"></span></div>         <div>Reviewers: James</div>     </div> </div>`)[0];
+                popup_39403e2ec9ddff81934dd65890a3f04b.setContent(html_1b4307c158b3fe7876e6551744084ad7);
+            
+        
+
+        marker_3420cf98c7fd4e540db7dacd993c7e4a.bindPopup(popup_39403e2ec9ddff81934dd65890a3f04b)
+        ;
+
+        
+    
+    
+            var marker_1f77642ce77cb8886f02ad8c00d26588 = L.marker(
+                [51.5176431187893, -0.0821380642615828],
+                {
+  "tags": [
+"Vegetarian",
+],
+}
+            ).addTo(map_a6404b47f940ef7643c8066f26410bdd);
+        
+    
+            var icon_ba46f1faab6c416f89536e6bc3b4c699 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightgreen",
+  "iconColor": "white",
+  "icon": "None",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_1f77642ce77cb8886f02ad8c00d26588.setIcon(icon_ba46f1faab6c416f89536e6bc3b4c699);
+        
+    
+        var popup_5bb72175d938f5a68c2b85e34eea1d2a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_41a129178091a71acda6d0a3d9a3b460 = $(`<div id="html_41a129178091a71acda6d0a3d9a3b460" style="width: 100.0%; height: 100.0%;">     <div style='width: 200px;'>         <strong>McDonalds</strong><br>         Unit 25, The Concourse Liverpool Street Station, London EC2M 7PY<br>         <div><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span></div>         <div>Reviewers: Owen</div>     </div> </div>`)[0];
+                popup_5bb72175d938f5a68c2b85e34eea1d2a.setContent(html_41a129178091a71acda6d0a3d9a3b460);
+            
+        
+
+        marker_1f77642ce77cb8886f02ad8c00d26588.bindPopup(popup_5bb72175d938f5a68c2b85e34eea1d2a)
+        ;
+
+        
+    
+    
+            var marker_bb4bcaa1b099ee5369e1a36ad9e977d2 = L.marker(
                 [51.5219486008704, -0.0833928012247406],
-                {"tags": ["Vegetarian"]}
-            ).addTo(map_869aa37219b82cd805ae9bd3bb6656a0);
+                {
+  "tags": [
+"Vegetarian",
+],
+}
+            ).addTo(map_a6404b47f940ef7643c8066f26410bdd);
         
     
-            var icon_97546d284dc623e3e0e08826f045e180 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "None", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            var icon_1e9040935b24376c7af95e167120babe = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "None",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
             );
-            marker_8906eb8f9f2b42713322fd1f3f8440d2.setIcon(icon_97546d284dc623e3e0e08826f045e180);
+            marker_bb4bcaa1b099ee5369e1a36ad9e977d2.setIcon(icon_1e9040935b24376c7af95e167120babe);
         
     
-        var popup_044615feeb60a509e3da419006336c96 = L.popup({"maxWidth": 300});
+        var popup_4775eef3253c19182e7be64d2fe7523b = L.popup({
+  "maxWidth": 300,
+});
 
         
             
-                var html_a3372a30cc280b82123c237ac36b2612 = $(`<div id="html_a3372a30cc280b82123c237ac36b2612" style="width: 100.0%; height: 100.0%;">     <div style='width: 200px;'>         <strong>Mexican Stand Clifton St Market</strong><br>         Clifton St, London<br>         <div><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span></div>         <div>Reviewers: Chiara</div>     </div> </div>`)[0];
-                popup_044615feeb60a509e3da419006336c96.setContent(html_a3372a30cc280b82123c237ac36b2612);
+                var html_5a87bd122e38a4270c25ff1d9f487611 = $(`<div id="html_5a87bd122e38a4270c25ff1d9f487611" style="width: 100.0%; height: 100.0%;">     <div style='width: 200px;'>         <strong>Mexican Stand Clifton St Market</strong><br>         Clifton St, London<br>         <div><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span></div>         <div>Reviewers: Chiara</div>     </div> </div>`)[0];
+                popup_4775eef3253c19182e7be64d2fe7523b.setContent(html_5a87bd122e38a4270c25ff1d9f487611);
             
         
 
-        marker_8906eb8f9f2b42713322fd1f3f8440d2.bindPopup(popup_044615feeb60a509e3da419006336c96)
+        marker_bb4bcaa1b099ee5369e1a36ad9e977d2.bindPopup(popup_4775eef3253c19182e7be64d2fe7523b)
         ;
 
         
     
     
-            var marker_5546d2b16205917d7858d18af5281ee6 = L.marker(
+            var marker_e6932b47de7e081d2e6b615410d0ba62 = L.marker(
                 [51.516964861398, -0.0754320525953778],
-                {"tags": ["Vegetarian"]}
-            ).addTo(map_869aa37219b82cd805ae9bd3bb6656a0);
+                {
+  "tags": [
+"Vegetarian",
+],
+}
+            ).addTo(map_a6404b47f940ef7643c8066f26410bdd);
         
     
-            var icon_02b6d220d5a9b5d9eb4dd98cd7509536 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "None", "iconColor": "white", "markerColor": "lightgreen", "prefix": "glyphicon"}
+            var icon_caa6cc494344094ca460e945f590fc50 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightgreen",
+  "iconColor": "white",
+  "icon": "None",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
             );
-            marker_5546d2b16205917d7858d18af5281ee6.setIcon(icon_02b6d220d5a9b5d9eb4dd98cd7509536);
+            marker_e6932b47de7e081d2e6b615410d0ba62.setIcon(icon_caa6cc494344094ca460e945f590fc50);
         
     
-        var popup_9e052cab13b2cf551317f0c6a810fcc5 = L.popup({"maxWidth": 300});
+        var popup_3691204051093e62a5f9ce0ca0f63dfa = L.popup({
+  "maxWidth": 300,
+});
 
         
             
-                var html_0d89ee889ec1dce0c9197e9ea333d669 = $(`<div id="html_0d89ee889ec1dce0c9197e9ea333d669" style="width: 100.0%; height: 100.0%;">     <div style='width: 200px;'>         <strong>Mexican Stand Petticoat Lane</strong><br>         Bell Lane, London<br>         <div><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span></div>         <div>Reviewers: Chiara</div>     </div> </div>`)[0];
-                popup_9e052cab13b2cf551317f0c6a810fcc5.setContent(html_0d89ee889ec1dce0c9197e9ea333d669);
+                var html_97dcb9f70e587c09f270996e038c930c = $(`<div id="html_97dcb9f70e587c09f270996e038c930c" style="width: 100.0%; height: 100.0%;">     <div style='width: 200px;'>         <strong>Mexican Stand Petticoat Lane</strong><br>         Bell Lane, London<br>         <div><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span></div>         <div>Reviewers: Chiara</div>     </div> </div>`)[0];
+                popup_3691204051093e62a5f9ce0ca0f63dfa.setContent(html_97dcb9f70e587c09f270996e038c930c);
             
         
 
-        marker_5546d2b16205917d7858d18af5281ee6.bindPopup(popup_9e052cab13b2cf551317f0c6a810fcc5)
+        marker_e6932b47de7e081d2e6b615410d0ba62.bindPopup(popup_3691204051093e62a5f9ce0ca0f63dfa)
         ;
 
         
     
     
-            var marker_ad7fc136d47abfc158155b1877273607 = L.marker(
+            var marker_dd72431cd3630ffd60426bd2f8945554 = L.marker(
+                [51.5165037096682, -0.0752102150571385],
+                {
+  "tags": [
+"Halal",
+],
+}
+            ).addTo(map_a6404b47f940ef7643c8066f26410bdd);
+        
+    
+            var icon_c738dec156caba8859c3d018d243c0f6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightgreen",
+  "iconColor": "white",
+  "icon": "None",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_dd72431cd3630ffd60426bd2f8945554.setIcon(icon_c738dec156caba8859c3d018d243c0f6);
+        
+    
+        var popup_23c496812748994c2f17222acd8cba1e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7693d2395030247bf4a2be2c1fd724d3 = $(`<div id="html_7693d2395030247bf4a2be2c1fd724d3" style="width: 100.0%; height: 100.0%;">     <div style='width: 200px;'>         <strong>Persian stand</strong><br>         Goulston St, London E1 7TP<br>         <div><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span></div>         <div>Reviewers: Arif</div>     </div> </div>`)[0];
+                popup_23c496812748994c2f17222acd8cba1e.setContent(html_7693d2395030247bf4a2be2c1fd724d3);
+            
+        
+
+        marker_dd72431cd3630ffd60426bd2f8945554.bindPopup(popup_23c496812748994c2f17222acd8cba1e)
+        ;
+
+        
+    
+    
+            var marker_f2db862f0c0bca3f622b3c65670868f9 = L.marker(
                 [51.5189602376247, -0.0771229921789124],
-                {"tags": []}
-            ).addTo(map_869aa37219b82cd805ae9bd3bb6656a0);
+                {
+  "tags": [
+],
+}
+            ).addTo(map_a6404b47f940ef7643c8066f26410bdd);
         
     
-            var icon_7cceaa9b39ef9fa0f832a8514a22438b = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "None", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            var icon_be83cd6fd5fd65b2e003e7455da325f4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "None",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
             );
-            marker_ad7fc136d47abfc158155b1877273607.setIcon(icon_7cceaa9b39ef9fa0f832a8514a22438b);
+            marker_f2db862f0c0bca3f622b3c65670868f9.setIcon(icon_be83cd6fd5fd65b2e003e7455da325f4);
         
     
-        var popup_f9eb7e14e8bb6db7b66a8ed9e83831f5 = L.popup({"maxWidth": 300});
+        var popup_ada027e1b87e1862dbc040d0e4b1ef4e = L.popup({
+  "maxWidth": 300,
+});
 
         
             
-                var html_7fa8d46cade115aea50a82a9778bbc31 = $(`<div id="html_7fa8d46cade115aea50a82a9778bbc31" style="width: 100.0%; height: 100.0%;">     <div style='width: 200px;'>         <strong>Pilpel</strong><br>         38 Brushfield St, London E1 6AT<br>         <div><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span></div>         <div>Reviewers: Yash</div>     </div> </div>`)[0];
-                popup_f9eb7e14e8bb6db7b66a8ed9e83831f5.setContent(html_7fa8d46cade115aea50a82a9778bbc31);
+                var html_e1139bb02cede3be17f516139bf47be2 = $(`<div id="html_e1139bb02cede3be17f516139bf47be2" style="width: 100.0%; height: 100.0%;">     <div style='width: 200px;'>         <strong>Pilpel</strong><br>         38 Brushfield St, London E1 6AT<br>         <div><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span></div>         <div>Reviewers: Yash</div>     </div> </div>`)[0];
+                popup_ada027e1b87e1862dbc040d0e4b1ef4e.setContent(html_e1139bb02cede3be17f516139bf47be2);
             
         
 
-        marker_ad7fc136d47abfc158155b1877273607.bindPopup(popup_f9eb7e14e8bb6db7b66a8ed9e83831f5)
+        marker_f2db862f0c0bca3f622b3c65670868f9.bindPopup(popup_ada027e1b87e1862dbc040d0e4b1ef4e)
         ;
 
         
     
     
-            var marker_2ff10c549b7b49cb5b2d045b5d23bf71 = L.marker(
+            var marker_7dd8cdb891c87162aedb251a0b435c07 = L.marker(
                 [51.5177266574513, -0.07725858254304],
-                {"tags": []}
-            ).addTo(map_869aa37219b82cd805ae9bd3bb6656a0);
+                {
+  "tags": [
+],
+}
+            ).addTo(map_a6404b47f940ef7643c8066f26410bdd);
         
     
-            var icon_f79c11b1c7de151a1754a97faa034bd4 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "None", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            var icon_b21a58520f2dfa4a8502be9a35375539 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "None",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
             );
-            marker_2ff10c549b7b49cb5b2d045b5d23bf71.setIcon(icon_f79c11b1c7de151a1754a97faa034bd4);
+            marker_7dd8cdb891c87162aedb251a0b435c07.setIcon(icon_b21a58520f2dfa4a8502be9a35375539);
         
     
-        var popup_4ce09e121e7994777cc6aa3656fa4f90 = L.popup({"maxWidth": 300});
+        var popup_216442c53e1a6154f97b5d6c802459f9 = L.popup({
+  "maxWidth": 300,
+});
 
         
             
-                var html_17fc438f438a6951db3f16980c17d4fa = $(`<div id="html_17fc438f438a6951db3f16980c17d4fa" style="width: 100.0%; height: 100.0%;">     <div style='width: 200px;'>         <strong>Pizza Union</strong><br>         25 Sandy's Row, London E1 7HS<br>         <div><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span></div>         <div>Reviewers: Chiara, James</div>     </div> </div>`)[0];
-                popup_4ce09e121e7994777cc6aa3656fa4f90.setContent(html_17fc438f438a6951db3f16980c17d4fa);
+                var html_f6201fd35fde0aafe17208f32e0c9a16 = $(`<div id="html_f6201fd35fde0aafe17208f32e0c9a16" style="width: 100.0%; height: 100.0%;">     <div style='width: 200px;'>         <strong>Pizza Union</strong><br>         25 Sandy's Row, London E1 7HS<br>         <div><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span></div>         <div>Reviewers: Chiara, James</div>     </div> </div>`)[0];
+                popup_216442c53e1a6154f97b5d6c802459f9.setContent(html_f6201fd35fde0aafe17208f32e0c9a16);
             
         
 
-        marker_2ff10c549b7b49cb5b2d045b5d23bf71.bindPopup(popup_4ce09e121e7994777cc6aa3656fa4f90)
+        marker_7dd8cdb891c87162aedb251a0b435c07.bindPopup(popup_216442c53e1a6154f97b5d6c802459f9)
         ;
 
         
     
     
-            var marker_ae5c2fea2ff50ca7cecf309951d16800 = L.marker(
+            var marker_3eaabe259b6502ef1353e0cb85375c73 = L.marker(
+                [51.5173998649633, -0.0803725016599827],
+                {
+  "tags": [
+"Vegan",
+],
+}
+            ).addTo(map_a6404b47f940ef7643c8066f26410bdd);
+        
+    
+            var icon_df2efc4d7e296757177469b94347d2af = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightgreen",
+  "iconColor": "white",
+  "icon": "None",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_3eaabe259b6502ef1353e0cb85375c73.setIcon(icon_df2efc4d7e296757177469b94347d2af);
+        
+    
+        var popup_022e8ea31a6638221542b47be5800171 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_484a05a031e5ae3a876de4629af63c5b = $(`<div id="html_484a05a031e5ae3a876de4629af63c5b" style="width: 100.0%; height: 100.0%;">     <div style='width: 200px;'>         <strong>Sushidog</strong><br>         166-170 Bishopsgate, City of London, London EC2M 4LX<br>         <div><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span></div>         <div>Reviewers: Janelle</div>     </div> </div>`)[0];
+                popup_022e8ea31a6638221542b47be5800171.setContent(html_484a05a031e5ae3a876de4629af63c5b);
+            
+        
+
+        marker_3eaabe259b6502ef1353e0cb85375c73.bindPopup(popup_022e8ea31a6638221542b47be5800171)
+        ;
+
+        
+    
+    
+            var marker_b6384e06f09e85ff5674d68da6f4a419 = L.marker(
                 [51.517228611681, -0.0803090136354747],
-                {"tags": []}
-            ).addTo(map_869aa37219b82cd805ae9bd3bb6656a0);
+                {
+  "tags": [
+],
+}
+            ).addTo(map_a6404b47f940ef7643c8066f26410bdd);
         
     
-            var icon_87624f67437289d9a47cc5057f3cd9c2 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "None", "iconColor": "white", "markerColor": "lightgreen", "prefix": "glyphicon"}
+            var icon_d2b731c90384f42b63ad6cbf897be93c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightgreen",
+  "iconColor": "white",
+  "icon": "None",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
             );
-            marker_ae5c2fea2ff50ca7cecf309951d16800.setIcon(icon_87624f67437289d9a47cc5057f3cd9c2);
+            marker_b6384e06f09e85ff5674d68da6f4a419.setIcon(icon_d2b731c90384f42b63ad6cbf897be93c);
         
     
-        var popup_6f15a8e349aacec93df2f62bd42006e8 = L.popup({"maxWidth": 300});
+        var popup_605a119dbdb5b56b8528af2dcb407c88 = L.popup({
+  "maxWidth": 300,
+});
 
         
             
-                var html_ab402fc6710186d8bdb3f5cd81a17d27 = $(`<div id="html_ab402fc6710186d8bdb3f5cd81a17d27" style="width: 100.0%; height: 100.0%;">     <div style='width: 200px;'>         <strong>Tesco Make Your Own Salad</strong><br>         158-164 Bishopsgate, London EC2M 4LN<br>         <div><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span></div>         <div>Reviewers: Linn</div>     </div> </div>`)[0];
-                popup_6f15a8e349aacec93df2f62bd42006e8.setContent(html_ab402fc6710186d8bdb3f5cd81a17d27);
+                var html_f3071ee0a7ff9a77ee6fa311f35acf8b = $(`<div id="html_f3071ee0a7ff9a77ee6fa311f35acf8b" style="width: 100.0%; height: 100.0%;">     <div style='width: 200px;'>         <strong>Tesco Make Your Own Salad</strong><br>         158-164 Bishopsgate, London EC2M 4LN<br>         <div><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span></div>         <div>Reviewers: Linn</div>     </div> </div>`)[0];
+                popup_605a119dbdb5b56b8528af2dcb407c88.setContent(html_f3071ee0a7ff9a77ee6fa311f35acf8b);
             
         
 
-        marker_ae5c2fea2ff50ca7cecf309951d16800.bindPopup(popup_6f15a8e349aacec93df2f62bd42006e8)
+        marker_b6384e06f09e85ff5674d68da6f4a419.bindPopup(popup_605a119dbdb5b56b8528af2dcb407c88)
         ;
 
         
     
     
-            var marker_4fa1ed0e819ced2f21bd9c612d9836a2 = L.marker(
+            var marker_b42022060a675b97a72bf0e530731b26 = L.marker(
                 [51.5171267150054, -0.0804139405556738],
-                {"tags": []}
-            ).addTo(map_869aa37219b82cd805ae9bd3bb6656a0);
+                {
+  "tags": [
+],
+}
+            ).addTo(map_a6404b47f940ef7643c8066f26410bdd);
         
     
-            var icon_3959a07c8535978a5c44c95b83ae6401 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "None", "iconColor": "white", "markerColor": "lightgreen", "prefix": "glyphicon"}
+            var icon_090130090562c91ee614df1c62df1249 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightgreen",
+  "iconColor": "white",
+  "icon": "None",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
             );
-            marker_4fa1ed0e819ced2f21bd9c612d9836a2.setIcon(icon_3959a07c8535978a5c44c95b83ae6401);
+            marker_b42022060a675b97a72bf0e530731b26.setIcon(icon_090130090562c91ee614df1c62df1249);
         
     
-        var popup_6a8a2764659985ce1deaa58f92bd8ed8 = L.popup({"maxWidth": 300});
+        var popup_968a7264e2b3bde6f39d3b152916911b = L.popup({
+  "maxWidth": 300,
+});
 
         
             
-                var html_7b406d189a32eddc0aeb6ff6d742ffcb = $(`<div id="html_7b406d189a32eddc0aeb6ff6d742ffcb" style="width: 100.0%; height: 100.0%;">     <div style='width: 200px;'>         <strong>Tesco Meal Deal</strong><br>         158-164 Bishopsgate, London EC2M 4LN<br>         <div><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span></div>         <div>Reviewers: Chiara</div>     </div> </div>`)[0];
-                popup_6a8a2764659985ce1deaa58f92bd8ed8.setContent(html_7b406d189a32eddc0aeb6ff6d742ffcb);
+                var html_50700e4cc34276e37255b49e3dbe7f2c = $(`<div id="html_50700e4cc34276e37255b49e3dbe7f2c" style="width: 100.0%; height: 100.0%;">     <div style='width: 200px;'>         <strong>Tesco Meal Deal</strong><br>         158-164 Bishopsgate, London EC2M 4LN<br>         <div><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span></div>         <div>Reviewers: Chiara</div>     </div> </div>`)[0];
+                popup_968a7264e2b3bde6f39d3b152916911b.setContent(html_50700e4cc34276e37255b49e3dbe7f2c);
             
         
 
-        marker_4fa1ed0e819ced2f21bd9c612d9836a2.bindPopup(popup_6a8a2764659985ce1deaa58f92bd8ed8)
+        marker_b42022060a675b97a72bf0e530731b26.bindPopup(popup_968a7264e2b3bde6f39d3b152916911b)
         ;
 
         
     
     
-            var marker_c5eaa864ed4291446a1521116d3d7e50 = L.marker(
+            var marker_15b75254639b9e9b4058c620d2fc7322 = L.marker(
+                [51.5207234472714, -0.0790965735728216],
+                {
+  "tags": [
+"Vegetarian",
+],
+}
+            ).addTo(map_a6404b47f940ef7643c8066f26410bdd);
+        
+    
+            var icon_79a44ff5edfffcc7ef319d9f6db7421d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "None",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_15b75254639b9e9b4058c620d2fc7322.setIcon(icon_79a44ff5edfffcc7ef319d9f6db7421d);
+        
+    
+        var popup_d4cb87d3bfad3a50e6b39e5f4f5fe41f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_70eb0761fefc68bd34382fc65a2813eb = $(`<div id="html_70eb0761fefc68bd34382fc65a2813eb" style="width: 100.0%; height: 100.0%;">     <div style='width: 200px;'>         <strong>The Huckletree Café</strong><br>         199 Bishopgate, EC2A 3TY<br>         <div><span class="fa fa-star checked"></span></div>         <div>Reviewers: Janelle</div>     </div> </div>`)[0];
+                popup_d4cb87d3bfad3a50e6b39e5f4f5fe41f.setContent(html_70eb0761fefc68bd34382fc65a2813eb);
+            
+        
+
+        marker_15b75254639b9e9b4058c620d2fc7322.bindPopup(popup_d4cb87d3bfad3a50e6b39e5f4f5fe41f)
+        ;
+
+        
+    
+    
+            var marker_07e374818de29691c7284316af6a8456 = L.marker(
+                [51.51656381, -0.075234642],
+                {
+  "tags": [
+],
+}
+            ).addTo(map_a6404b47f940ef7643c8066f26410bdd);
+        
+    
+            var icon_71baf1e747d6c05a26e9d22498a6d3f1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "None",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_07e374818de29691c7284316af6a8456.setIcon(icon_71baf1e747d6c05a26e9d22498a6d3f1);
+        
+    
+        var popup_90e4edb6a4ac241628c7687384c22bb3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_bbc4fae8bfc313d956b8fd213c8fc0ca = $(`<div id="html_bbc4fae8bfc313d956b8fd213c8fc0ca" style="width: 100.0%; height: 100.0%;">     <div style='width: 200px;'>         <strong>The Korean Stand </strong><br>         Goulston St, London E1 7TP<br>         <div><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span></div>         <div>Reviewers: Janelle</div>     </div> </div>`)[0];
+                popup_90e4edb6a4ac241628c7687384c22bb3.setContent(html_bbc4fae8bfc313d956b8fd213c8fc0ca);
+            
+        
+
+        marker_07e374818de29691c7284316af6a8456.bindPopup(popup_90e4edb6a4ac241628c7687384c22bb3)
+        ;
+
+        
+    
+    
+            var marker_a1d4ca82767a4f2320264034003a470f = L.marker(
                 [51.5162485747334, -0.0770975827269555],
-                {"tags": ["Vegetarian"]}
-            ).addTo(map_869aa37219b82cd805ae9bd3bb6656a0);
+                {
+  "tags": [
+"Vegetarian",
+],
+}
+            ).addTo(map_a6404b47f940ef7643c8066f26410bdd);
         
     
-            var icon_ea067bc4d05ab9ca3b8096ab6d6acf56 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "None", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            var icon_e035e5b86b2a99a9226ae7dc93339a35 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "None",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
             );
-            marker_c5eaa864ed4291446a1521116d3d7e50.setIcon(icon_ea067bc4d05ab9ca3b8096ab6d6acf56);
+            marker_a1d4ca82767a4f2320264034003a470f.setIcon(icon_e035e5b86b2a99a9226ae7dc93339a35);
         
     
-        var popup_ea77196d1a532e65f62e5aa8dfeadb83 = L.popup({"maxWidth": 300});
+        var popup_bf555931d7598768ad6ce3ed10259459 = L.popup({
+  "maxWidth": 300,
+});
 
         
             
-                var html_9d1e8925b5a662a8c8a126e47c1e5505 = $(`<div id="html_9d1e8925b5a662a8c8a126e47c1e5505" style="width: 100.0%; height: 100.0%;">     <div style='width: 200px;'>         <strong>Tifinbox</strong><br>         14 Harrow Pl, London E1 7DB<br>         <div><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span></div>         <div>Reviewers: Chiara</div>     </div> </div>`)[0];
-                popup_ea77196d1a532e65f62e5aa8dfeadb83.setContent(html_9d1e8925b5a662a8c8a126e47c1e5505);
+                var html_a8e1185c0d2acf23a5da28d81e47a23b = $(`<div id="html_a8e1185c0d2acf23a5da28d81e47a23b" style="width: 100.0%; height: 100.0%;">     <div style='width: 200px;'>         <strong>Tifinbox</strong><br>         14 Harrow Pl, London E1 7DB<br>         <div><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span></div>         <div>Reviewers: Chiara</div>     </div> </div>`)[0];
+                popup_bf555931d7598768ad6ce3ed10259459.setContent(html_a8e1185c0d2acf23a5da28d81e47a23b);
             
         
 
-        marker_c5eaa864ed4291446a1521116d3d7e50.bindPopup(popup_ea77196d1a532e65f62e5aa8dfeadb83)
+        marker_a1d4ca82767a4f2320264034003a470f.bindPopup(popup_bf555931d7598768ad6ce3ed10259459)
         ;
 
         
     
     
-            var marker_183c8bf0e4b8820c45c801bd0237cbc6 = L.marker(
+            var marker_93aca682aa86e32b4ac81b3230f2f66b = L.marker(
                 [51.5175421278204, -0.0801838027000366],
-                {"tags": ["Vegetarian"]}
-            ).addTo(map_869aa37219b82cd805ae9bd3bb6656a0);
+                {
+  "tags": [
+"Vegetarian",
+],
+}
+            ).addTo(map_a6404b47f940ef7643c8066f26410bdd);
         
     
-            var icon_844efb02127936da7f4576b8c8e8558a = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "None", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            var icon_2d69f22ff46112dae12a7f255087c457 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "None",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
             );
-            marker_183c8bf0e4b8820c45c801bd0237cbc6.setIcon(icon_844efb02127936da7f4576b8c8e8558a);
+            marker_93aca682aa86e32b4ac81b3230f2f66b.setIcon(icon_2d69f22ff46112dae12a7f255087c457);
         
     
-        var popup_e222eb4aa92654bf9778ce81e501800a = L.popup({"maxWidth": 300});
+        var popup_4051ae4a892a4d5f700f89264a1dcb1a = L.popup({
+  "maxWidth": 300,
+});
 
         
             
-                var html_4ab9cf171f94fad28c0b66290e8aefb0 = $(`<div id="html_4ab9cf171f94fad28c0b66290e8aefb0" style="width: 100.0%; height: 100.0%;">     <div style='width: 200px;'>         <strong>Wasabi</strong><br>         172 Bishopsgate, London EC2M 4NQ<br>         <div><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span></div>         <div>Reviewers: Eleonora</div>     </div> </div>`)[0];
-                popup_e222eb4aa92654bf9778ce81e501800a.setContent(html_4ab9cf171f94fad28c0b66290e8aefb0);
+                var html_e97e6bf6317309b81d83348727ec8b62 = $(`<div id="html_e97e6bf6317309b81d83348727ec8b62" style="width: 100.0%; height: 100.0%;">     <div style='width: 200px;'>         <strong>Wasabi</strong><br>         172 Bishopsgate, London EC2M 4NQ<br>         <div><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span></div>         <div>Reviewers: Eleonora</div>     </div> </div>`)[0];
+                popup_4051ae4a892a4d5f700f89264a1dcb1a.setContent(html_e97e6bf6317309b81d83348727ec8b62);
             
         
 
-        marker_183c8bf0e4b8820c45c801bd0237cbc6.bindPopup(popup_e222eb4aa92654bf9778ce81e501800a)
+        marker_93aca682aa86e32b4ac81b3230f2f66b.bindPopup(popup_4051ae4a892a4d5f700f89264a1dcb1a)
         ;
 
         
     
     
-            var marker_01e600bd9a7c10fb90ea79efe750fb30 = L.marker(
+            var marker_504d3471d0668b6b9b89ffdab8b4d61c = L.marker(
+                [51.5213536811858, -0.0835202439347415],
+                {
+  "tags": [
+],
+}
+            ).addTo(map_a6404b47f940ef7643c8066f26410bdd);
+        
+    
+            var icon_082de64a31062252476d304da33f4685 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "None",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_504d3471d0668b6b9b89ffdab8b4d61c.setIcon(icon_082de64a31062252476d304da33f4685);
+        
+    
+        var popup_d6d2d8aad8e2dc007e22eb87b284bf95 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c58246b7b5e3a06de69d649d1ea53b38 = $(`<div id="html_c58246b7b5e3a06de69d649d1ea53b38" style="width: 100.0%; height: 100.0%;">     <div style='width: 200px;'>         <strong>Yum Bowl</strong><br>         Clifton St, London, EC2A 4DX<br>         <div><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span></div>         <div>Reviewers: James</div>     </div> </div>`)[0];
+                popup_d6d2d8aad8e2dc007e22eb87b284bf95.setContent(html_c58246b7b5e3a06de69d649d1ea53b38);
+            
+        
+
+        marker_504d3471d0668b6b9b89ffdab8b4d61c.bindPopup(popup_d6d2d8aad8e2dc007e22eb87b284bf95)
+        ;
+
+        
+    
+    
+            var marker_b02067b9e5617d4e87e5ff78a552ac4e = L.marker(
                 [51.5164812605397, -0.0751095254648287],
-                {"tags": []}
-            ).addTo(map_869aa37219b82cd805ae9bd3bb6656a0);
+                {
+  "tags": [
+],
+}
+            ).addTo(map_a6404b47f940ef7643c8066f26410bdd);
         
     
-            var icon_a7d482dfd40b19d372cec8877376d294 = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "None", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            var icon_77bd92681d18e513ff488adeb4c26760 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "None",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
             );
-            marker_01e600bd9a7c10fb90ea79efe750fb30.setIcon(icon_a7d482dfd40b19d372cec8877376d294);
+            marker_b02067b9e5617d4e87e5ff78a552ac4e.setIcon(icon_77bd92681d18e513ff488adeb4c26760);
         
     
-        var popup_0c4ff1ccba0cb4431032b0d19a9728a1 = L.popup({"maxWidth": 300});
+        var popup_6ceb5d82a321391183dbc3d10092eee1 = L.popup({
+  "maxWidth": 300,
+});
 
         
             
-                var html_d83b0c6532a944059f02b2885471e1ec = $(`<div id="html_d83b0c6532a944059f02b2885471e1ec" style="width: 100.0%; height: 100.0%;">     <div style='width: 200px;'>         <strong>Yum Yum Chinese</strong><br>         Goulston St, London E1 7TP<br>         <div><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span></div>         <div>Reviewers: James</div>     </div> </div>`)[0];
-                popup_0c4ff1ccba0cb4431032b0d19a9728a1.setContent(html_d83b0c6532a944059f02b2885471e1ec);
+                var html_dfb718ff25269914947d682bdb2194ae = $(`<div id="html_dfb718ff25269914947d682bdb2194ae" style="width: 100.0%; height: 100.0%;">     <div style='width: 200px;'>         <strong>Yum Yum Chinese</strong><br>         Goulston St, London E1 7TP<br>         <div><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span></div>         <div>Reviewers: James</div>     </div> </div>`)[0];
+                popup_6ceb5d82a321391183dbc3d10092eee1.setContent(html_dfb718ff25269914947d682bdb2194ae);
             
         
 
-        marker_01e600bd9a7c10fb90ea79efe750fb30.bindPopup(popup_0c4ff1ccba0cb4431032b0d19a9728a1)
+        marker_b02067b9e5617d4e87e5ff78a552ac4e.bindPopup(popup_6ceb5d82a321391183dbc3d10092eee1)
         ;
 
         
     
     
-            var tag_filter_button_e667bc0ce15acc0bd2ba840d13e80f52 = L.control.tagFilterButton(
-                {"clearText": "clear", "data": ["Vegetarian", "Vegan"], "filterOnEveryClick": true, "icon": "fa-filter", "openPopupOnHover": true}
-            ).addTo(map_869aa37219b82cd805ae9bd3bb6656a0);
+            var tag_filter_button_ae83a5bc5ff433696493fef3ff5c6af3 = L.control.tagFilterButton(
+                {
+  "data": [
+"Halal",
+"Vegetarian",
+"Vegan",
+],
+  "icon": "fa-filter",
+  "clearText": "clear",
+  "filterOnEveryClick": true,
+  "openPopupOnHover": false,
+  "openPopupOnHover": true,
+}
+            ).addTo(map_a6404b47f940ef7643c8066f26410bdd);
         
 </script>
 </html>
