@@ -1,130 +1,152 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Portfolio" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-python.min.js"></script>
-    <script
-      src="https://kit.fontawesome.com/fa62c117c7.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="../resources/css/styles.css" />
-    <title>James Legrand</title>
-    <link rel="icon" type="image/png" href="../resources/images/pfp.png"/>
-  </head>
-  <body class="light" id="top">
-    <header class="header center">
-      <div class="link">
-        <a href="https://james-legrand.github.io/">
-          <img src="../resources/images/pfp.png" width="50" height="50" alt="Profile Picture">
-        </a>
-      </div>
-      <nav class="nav center">
-        <ul class="nav__list center">
-          <li class="nav__list-item">
-            <a class="link link--nav" href="../#about">About</a>
-          </li>
-          <li class="nav__list-item">
-            <a class="link link--nav" href="../#projects">Projects</a>
-          </li>
-          <li class="nav__list-item">
-            <a class="link link--nav" href="../#economics">Economics</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
 
-    <main>
-      <h2 align="center">Fuzzy Matching Tool</h2>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfolio" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-python.min.js"></script>
+  <script src="https://kit.fontawesome.com/fa62c117c7.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../resources/css/styles.css" />
+  <title>James Legrand</title>
+  <link rel="icon" type="image/png" href="../resources/images/pfp.png" />
+</head>
 
-      <p align="center">A GUI-based tool for fuzzy string matching using RapidFuzz.</p>
-      
-      <hr>
-      
-      <h3>Features</h3>
-      <h4>Data formats</h4>
-      <p>Import and export currently support <code>.xlsx</code>, <code>.csv</code>, and <code>.dta</code> file formats. Select columns for matching and uniquely identifying observations.</p>
-      <br>
-      <h4>Output Types</h4>
-      <p>Choose from the following output options:</p>
-      <ul style="padding-left: 20px;">
-        <li><strong>All possible combinations:</strong> Reports score for every possible match, grouped by ID in dataset 1.</li>
-        <li><strong>Highest possible matches:</strong> Reports the best match for each ID in dataset 1.</li>
-        <li><strong>Matches above a threshold:</strong> Groups matches by ID in dataset 1.</li>
+<body class="light" id="top">
+  <header class="header center">
+    <div class="link">
+      <a href="https://james-legrand.github.io/">
+        <img src="../resources/images/pfp.png" width="50" height="50" alt="Profile Picture">
+      </a>
+    </div>
+    <nav class="nav center">
+      <ul class="nav__list center">
+        <li class="nav__list-item">
+          <a class="link link--nav" href="../#about">About</a>
+        </li>
+        <li class="nav__list-item">
+          <a class="link link--nav" href="../#projects">Projects</a>
+        </li>
+        <li class="nav__list-item">
+          <a class="link link--nav" href="../#economics">Economics</a>
+        </li>
       </ul>
-      <br>
-      <h4>Matching Algorithms</h4>
-      <h5>Set Ratio</h5>
-      <p>Compares based on unique/common words, ignoring extra and repeated words.</p>
-      <pre class="code-block"><code class="language-python">In [1]: fuzz.token_set_ratio("I love competition economics", "competition economics")
-    Out[1]: 100</code></pre>
+    </nav>
+  </header>
 
-      <h5>Sort Ratio</h5>
-      <p>Sorts words in strings before comparison.</p>
-      <pre class="code-block"><code class="language-python">In [2]: fuzz.token_sort_ratio("I love competition economics", "economics competition I love")
+  <main>
+    <h2 align="center">Fuzzy Matching Tool</h2>
+
+    <div style="height: 10px;"></div>
+
+    <p>A GUI-based tool for fuzzy string matching using RapidFuzz, developed using CustomTkinter. Taking as input two
+      datasets of strings to match, this tool returns a cleaned dataset containing match scores according to the
+      specified algorithm and output type.</p>
+
+    <div style="height: 10px;"></div>
+
+    <h3>Features</h3>
+    <div style="height: 10px;"></div>
+    <h4>Data formats</h4>
+    <p>Data is input as two datasets to match across, each containing at minimum a unique ID for each row and the
+      corresponding string to be matched. Matching takes place across these datasets, and the result is export as a
+      single dataset. The import and export filetypes currently supported are text (.csv), Excel (.xlsx) and Stata
+      (.dta)</p>
+    <div style="height: 10px;"></div>
+    <h4>Output Types</h4>
+    <p>The results can be calculated and output in three ways:</p>
+    <ul style="padding-left: 20px;">
+      <li><strong>All possible combinations:</strong> Reports match score for every possible combination of strings
+        across input datasets. The output is grouped by dataset 1 ID.</li>
+      <li><strong>Highest matches only:</strong> Reports the best match in dataset 2 for each ID in dataset 1.</li>
+      <li><strong>Matches above threshold:</strong> Reports all match scores above the threshold set by the user. The
+        output is grouped by ID in dataset 1.</li>
+    </ul>
+    <div style="height: 10px;"></div>
+    <h4>Matching Algorithms</h4>
+    <h5>Set Ratio</h5>
+    <p>Compares based on unique/common words, ignoring extra and repeated words.</p>
+    <pre class="code-block"><code class="language-python">In [1]: fuzz.token_set_ratio("I love competition economics", "competition economics")
+Out[1]: 100</code></pre>
+
+    <h5>Sort Ratio</h5>
+    <p>Sorts words in strings before comparison.</p>
+    <pre class="code-block"><code class="language-python">In [2]: fuzz.token_sort_ratio("I love competition economics", "economics competition I love")
 Out[2]: 100</code></pre>
 
-      <h5>Max(Set Ratio, Sort Ratio)</h5>
-      <p>Uses the higher score of Set Ratio and Sort Ratio.</p>
-      <pre class="code-block"><code class="language-python">In [1]: fuzz.token_set_ratio("I love competition economics", "competition economics")
+    <h5>Max(Set Ratio, Sort Ratio)</h5>
+    <p>Uses the higher score of Set Ratio and Sort Ratio.</p>
+    <pre class="code-block"><code class="language-python">In [1]: fuzz.token_set_ratio("I love competition economics", "competition economics")
 Out[1]: 100
 In [2]: fuzz.token_sort_ratio("I love competition economics", "competition economics")
 Out[2]: 85.71428571428572
 In [3]: fuzz.token_ratio("I love competition economics", "competition economics")
 Out[3]: 100</code></pre>
 
-      <h5>WRatio</h5>
-      <p>Weighted score for better accuracy.</p>
-      <pre class="code-block"><code class="language-python">In [1]: fuzz.WRatio("I love competition economics", "competition economics")
-Out[1]: 95.0</code></pre>
-
-      <br>
-      <h4>Additional Settings</h4>
-      <ul style="padding-left: 20px;">
-        <li><strong>Fuzzy animal fact:</strong> Prints a fun fact about fuzzy animals in the completion message.</li>
-        <li><strong>Prep for manual checks:</strong> Adds columns for validation and comments, with color grouping for easier comparison.</li>
-        <li><strong>Keep all columns:</strong> Includes all columns from the original datasets in the output.</li>
-      </ul>
-      <br>
-      <h3>Preview</h3>
-      <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
-        <img 
-          src="../resources/images/fuzzy_dark.png" 
-          alt="Fuzzy Matching Dark Theme" 
-          width="250" 
-          style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); flex: 1; max-width: 100%;">
-        <img 
-          src="../resources/images/fuzzy_light.png" 
-          alt="Fuzzy Matching Light Theme" 
-          width="250" 
-          style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); flex: 1; max-width: 100%;">
-      </div>
-      
-      
-    </main>
-
-    <div class="scroll-container">
-      <div class="scroll-top">
-        <a aria-label="Scroll up" href="#top">
-          <i aria-hidden="true" class="fas fa-arrow-up"></i>
-        </a>
-      </div>
+    <h5>QRatio</h5>
+    <p>Calculates the standard InDel similarity ratio, pre-processing strings for speed.</p>
+    <pre class="code-block"><code class="language-python">In [1]: fuzz.QRatio('I love competition economics', 'competition economics')
+Out[1]: 85.71428571428572</code></pre>
+    The above example contains two strings of length 28 an 21 respectively. To reach the first string from the second
+    requires 7 insertions and the ratio is thus 6/7.
+    <div style="height: 10px;"></div>
+    <h4>Additional Settings</h4>
+    Beyond the toggle for theme (selecting between light and dark mode), it is also possible to toggle the visibility of
+    several additional features:
+    <ul style="padding-left: 20px;">
+      <li><strong>Debug window:</strong> Prints debug statements as the code runs to monitor progress; any errors are
+        routed to this window.</li>
+      <li><strong>2 Column Match:</strong> Switch to toggle matching on 2 columns seperately, then aggregating the
+        score. The score can be aggregated using the maximum (OR), minimum (AND) or weighted average, with weight set by
+        a slider.</li>
+      <li><strong>Fuzzy animal fact:</strong> Switch to enable/disable display of a fuzzy animal fact on completion!
+      </li>
+      <li><strong> Prep for manual checks</strong> Switch to enable/disable the creation of columns helpful for manually
+        verifying the matching output. </li>
+      <li><strong>Keep all columns:</strong> Switch to enable/disable including all columns from the input datasets in
+        the output.</li>
+    </ul>
+    <br>
+    <h3>Preview</h3>
+    <div style="height: 10px;"></div>
+    <p>
+      By default the window displays in dark theme with advanced options hidden, as below:
+    </p>
+    <div style="height: 10px;"></div>
+    <div style="text-align: center;">
+      <img src="../resources/images/fuzzy_base.png" alt="Fuzzy Matching Dark Theme" width=60% height=auto>
     </div>
-     <!-- Include Prism.js -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-    <!-- Line Numbers Plugin -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
-     <!-- Python Language Support -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
-    <script src="../resources/js/script.js"></script>
-  </body>
+    <div style="height: 10px;"></div>
+    <p>
+      Toggling the advanced options toggle displays the additional settings, as below. Toggling theme switches the GUI from dark mode to light, and vice versa.
+    </p>
+    <div style="height: 10px;"></div>
+    <div style="text-align: center;">
+      <img src="../resources/images/fuzzy_advanced.png" alt="Fuzzy Matching Dark Theme" width=90% height=auto>
+    </div>
+
+  </main>
+
+  <div class="scroll-container">
+    <div class="scroll-top">
+      <a aria-label="Scroll up" href="#top">
+        <i aria-hidden="true" class="fas fa-arrow-up"></i>
+      </a>
+    </div>
+  </div>
+  <!-- Include Prism.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <!-- Line Numbers Plugin -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js">
+  </script>
+  <!-- Python Language Support -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+  <script src="../resources/js/script.js"></script>
+</body>
+
 </html>
