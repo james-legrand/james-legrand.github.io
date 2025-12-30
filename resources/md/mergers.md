@@ -2,14 +2,13 @@ This note serves as an introductory guide to merger simulation techniques, writt
 
 Merger simulations are one of many approaches to forecasting the unilateral effects of a merger. At a high level, merger simulations work by first imposing a form of competition, then calibrating the *structural parameters* of the relevant theoretical model using pre-merger data. This is to say, parameters are specified in such a way that the moments implied by the model match the empirical moments (elasticities, market shares etc.) pre-merger. Under the assumption that these parameters remain unchanged, the model is then applied to any number of counterfactuals to predict price changes.
 
-Of course, it is important to keep in mind that economists are often wrong. Modelling is never entirely comprehensive, and even if it were, the future is not deterministic. However, having a structured approach to such problems, rather than relying solely on intuition, allows others to replicate, interpret, and further our understanding. It is crucial, though, to pay attention to the assumptions made at every step and the many ways they might be broken.
+Before starting, it is important to keep the following disclaimer in mind. As 'scientific' as these approaches may seem, these models (and economists more generally!) are often wrong. Modelling is never entirely comprehensive, and even if it were, the future is not deterministic. However, having a structured approach to such problems, rather than relying solely on intuition, allows others to replicate, interpret, and further our understanding. It is crucial to pay attention to the assumptions made at every step and the many ways they might be broken.
 
 To begin, it is useful to consider a high-level view on the world of merger simulations, and the many approaches available to us. A great place to start is the following categorisation, courtesy of [Budzinksi and Ruhmer (2009)](https://academic.oup.com/jcle/article-abstract/6/2/277/906293). At the first stage, models are classified according to the assumed form of competition that best describes the market. That is, whether competition is in prices, quantities or through an auction mechanism. At the second level of classification, the most common model classification - Bertrand – is split with respect to the demand system. The figure below illustrates this categorisation scheme.
 
 ![Merger Sim Flow chart](../images/merger_simulation_flow.png)
 
 The remainder of this note takes each category in turn, providing background, deriving key theoretical results, and replicating seminal empirical work.
-
 
 - [Episode I: Linear Demand](#episode--the-phantom-elasticities)
     - [Model Setup](#model-setup)
@@ -22,8 +21,8 @@ The remainder of this note takes each category in turn, providing background, de
     - [Appendix](#appendix-1)
 - [Episode III – Multi-Level Demand](#episode-iii-revenge-of-the-bottoms)
 - [Episode IV – Logit](#episode-100-a-binary-hope)
-- [Episode V – Cournot Models](#episode-v-quantity-setting-strikes-back)
-- [Episode VI – Auction Models](#episode--return-of-micro-theory)
+- [Episode V – Cournot Models](#episode--quantity-setting-strikes-back)
+- [Episode VI – Auction Models](#episode-v_i-return-of-micro-theory)
 
 ## Episode \\: The Phantom Elasticities
 This first note covers the most simple of demand structures: linear demand. Credit for this section goes to [Davis(2006)](https://www.biicl.org/files/2757_peter_davis_-_coordinated_effects_merger_simulation_with_linear_demands.pdf).
@@ -184,7 +183,7 @@ For example, if we have the simplest case of independent goods each owned by a s
 ```
 For example, if prices pre-merger are 1 for each firm, the implied cost would be 3 for each firm. We can then plug this estimate into our formulas above, and proceed with simulation as normal.
 ## Episode II(A): Attack of the Shares
-This note covers a simple PCAIDS model, following the original paper by [Epstein and Rubinfield(2001)](https://escholarship.org/uc/item/2sq9s8c8).
+This note covers a simple PCAIDS model, following the original paper by [Epstein and Rubinfield (2001)](https://escholarship.org/uc/item/2sq9s8c8).
 
 Proportionality-Calibrated AIDS (PCAIDS) is an attempt to reduce the reliance on vast amounts of data or circumvent the estimation problems of standard AIDS. PCAIDS requires neither scanner data nor pre-merger prices. It only requires information on:
 1. market shares,
@@ -282,7 +281,7 @@ b_{21} = - \frac{s_2}{s_2+s_3} \cdot b_{11}, \quad b_{31} = - \frac{s_3}{s_2+s_3
 ```
 The same result holds for other prices:
 ```math
-b_{ij} = \frac{s_i}{\sum_{k \neq i}s_k} \cdot b_{jj}
+b_{ij} = \frac{s_i}{\sum_{k != i} s_k} \cdot b_{jj}
 ```
 Implementing this allows us to fill in the remainder of the coefficients
 ```python
@@ -563,7 +562,7 @@ Beer paper
 ### Nested Logit
 ### Random Coefficients Logit
 
-## Episode V: Quantity-Setting Strikes Back
+## Episode ◡: Quantity-Setting Strikes Back
 
-## Episode $v_i$: Return of Micro Theory
+## Episode v_i: Return of Micro Theory
 
