@@ -91,7 +91,7 @@ Output:
 Firm 1 Q-learning: 1.7357, Nash: 1.4729
 Firm 2 Q-learning: 1.7714, Nash: 1.4729
 ```
-![alt text](https://i.ibb.co/b7pxBXf/Logit-QLearn.png)
+![Duopoly Q learning](../images/algocomp_q.png)
 
  
  
@@ -127,6 +127,6 @@ Firm 2 PSO: 1.2133, Nash: 1.0133
 Firm 3 PSO: 1.2133, Nash: 1.0133
 Firm 4 PSO: 1.2133, Nash: 1.0133
 ```
-![alt text](https://i.ibb.co/jV22Fgf/logitpso.png)
+![Multi-firm PSO](../images/algocomp_pso.png)
 
 
